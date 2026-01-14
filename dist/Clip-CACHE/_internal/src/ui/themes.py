@@ -1,3 +1,15 @@
+# ------------------------------------------------------------------------------
+# COPYRIGHT (C) 2026 h4. ALL RIGHTS RESERVED.
+#
+# This software is provided under a SOURCE-AVAILABLE COMMERCIAL LICENSE.
+# You may view and use this code for personal, non-commercial purposes only.
+#
+# ANY COMMERCIAL USE, REDISTRIBUTION, OR DERIVATIVE WORK FOR FINANCIAL GAIN
+# REQUIRES A 50% ROYALTY PAYMENT TO THE AUTHOR (h4) FROM THE FIRST DOLLAR EARNED.
+#
+# See LICENSE.md for full legal terms and royalty obligations.
+# ------------------------------------------------------------------------------
+
 from PyQt6.QtGui import QColor
 
 class ThemeManager:
