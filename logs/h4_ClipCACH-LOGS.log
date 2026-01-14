@@ -1,0 +1,614 @@
+[2026-01-14 09:38:09.277] 
+  ___________________________________________________________
+ /                                                           \
+|   _____  _____  ____    __  __  ____  ____  ______        |
+|  / ____|/ ____|/ __ \  |  \/  |/ __ \|  _ \|  ____|       |
+| | |  __| |  __| |  | | | \  / | |  | | | | | |__          |
+| | | |_ | | |_ | |  | | | |\/| | |  | | | | |  __|         |
+| | |__| | |__| | |__| | | |  | | |__| | |_| | |____        |
+|  \_____|\_____|\____/  |_|  |_|\____/|____/|______|       |
+|                                                           |
+ \___________________________________________________________/
+        
+[2026-01-14 09:38:09.277] [SYSTEM]  :: GOD MODE ENABLED     :: NUCLEAR MONITORING ACTIVE
+[2026-01-14 09:38:09.281] [SYSTEM]  :: OS SNAPSHOT          :: Initial Process Count: 480
+[2026-01-14 09:38:09.283] [SYSTEM]  :: WINDOW FOCUS         :: 'SmartBoard - Antigravity - Implementation Plan' (Antigravity.exe : 6276)
+[2026-01-14 09:38:09.283] [SYSTEM]  :: DISK I/O             :: Read: 3005773 MB | Write: 1252942 MB
+[2026-01-14 09:38:11.282] [APP]     :: TEST EVENT           :: Simulated App Event
+[2026-01-14 09:38:11.282] [ERROR]   :: TEST ERROR           :: Simulated Error Event
+[2026-01-14 09:38:11.283] [SYSTEM]  :: GOD MODE DISABLED    :: Monitoring Stopped
+[2026-01-14 09:43:44.198] 
+  ___________________________________________________________
+ /                                                           \
+|    _____  ____  _____     __  __  ____  ____  ______        |
+|   / ____|/ __ \|  __ \   |  \/  |/ __ \|  _ \|  ____|       |
+|  | |  __| |  | | |  | |  | \  / | |  | | | | | |__          |
+|  | | |_ | |  | | |  | |  | |\/| | |  | | | | |  __|         |
+|  | |__| | |__| | |__| |  | |  | | |__| | |_| | |____        |
+|   \_____|\____/|_____/   |_|  |_|\____/|____/|______|       |
+|                                                             |
+ \___________________________________________________________/
+        
+[2026-01-14 09:43:44.463] [SYSTEM]  :: GOD MODE ENABLED     :: NUCLEAR MONITORING ACTIVE
+[2026-01-14 09:43:44.464] [SYSTEM]  :: OS SNAPSHOT          :: Initial Process Count: 481
+[2026-01-14 09:43:44.477] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 34300)
+[2026-01-14 09:43:44.477] [SYSTEM]  :: DISK I/O             :: Read: 3006496 MB | Write: 1253921 MB
+[2026-01-14 09:43:45.001] [WARNING] :: HIGH MEMORY USAGE    :: 80.6% Used (12.61 GB)
+[2026-01-14 09:43:46.557] [WARNING] :: HIGH MEMORY USAGE    :: 80.6% Used (12.60 GB)
+[2026-01-14 09:43:48.112] [WARNING] :: HIGH MEMORY USAGE    :: 80.5% Used (12.59 GB)
+[2026-01-14 09:43:49.484] [SYSTEM]  :: DISK I/O             :: Read: 3006499 MB | Write: 1253937 MB
+[2026-01-14 09:43:49.677] [WARNING] :: HIGH MEMORY USAGE    :: 80.5% Used (12.58 GB)
+[2026-01-14 09:43:51.223] [WARNING] :: HIGH MEMORY USAGE    :: 80.4% Used (12.58 GB)
+[2026-01-14 09:43:52.777] [WARNING] :: HIGH MEMORY USAGE    :: 80.4% Used (12.58 GB)
+[2026-01-14 09:43:53.488] [SYSTEM]  :: WINDOW FOCUS         :: 'Snipping Tool Overlay' (SnippingTool.exe : 36884)
+[2026-01-14 09:43:54.331] [WARNING] :: HIGH MEMORY USAGE    :: 81.0% Used (12.67 GB)
+[2026-01-14 09:43:54.493] [APP]     :: PROCESS STARTED      :: SnippingTool.exe (PID: 36884)
+[2026-01-14 09:43:54.495] [APP]     :: PROCESS ENDED        :: PID: 46348
+[2026-01-14 09:43:54.496] [SYSTEM]  :: DISK I/O             :: Read: 3006501 MB | Write: 1253948 MB
+[2026-01-14 09:43:55.498] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 34300)
+[2026-01-14 09:43:55.912] [WARNING] :: HIGH MEMORY USAGE    :: 80.9% Used (12.65 GB)
+[2026-01-14 09:43:56.500] [APP]     :: PROCESS STARTED      :: svchost.exe (PID: 27504)
+[2026-01-14 09:43:56.502] [APP]     :: PROCESS STARTED      :: taskhostw.exe (PID: 2756)
+[2026-01-14 09:43:56.502] [APP]     :: PROCESS ENDED        :: PID: 36884
+[2026-01-14 09:43:57.469] [WARNING] :: HIGH MEMORY USAGE    :: 81.4% Used (12.72 GB)
+[2026-01-14 09:43:58.504] [APP]     :: PROCESS ENDED        :: PID: 2756
+[2026-01-14 09:43:59.009] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 34300)
+[2026-01-14 09:43:59.023] [WARNING] :: HIGH MEMORY USAGE    :: 81.6% Used (12.76 GB)
+[2026-01-14 09:43:59.511] [SYSTEM]  :: DISK I/O             :: Read: 3006505 MB | Write: 1254149 MB
+[2026-01-14 09:44:00.588] [WARNING] :: HIGH MEMORY USAGE    :: 81.7% Used (12.78 GB)
+[2026-01-14 09:44:02.141] [WARNING] :: HIGH MEMORY USAGE    :: 81.6% Used (12.75 GB)
+[2026-01-14 09:44:02.515] [APP]     :: PROCESS STARTED      :: AsusSystemAnalysis.exe (PID: 44948)
+[2026-01-14 09:44:02.516] [APP]     :: PROCESS STARTED      :: conhost.exe (PID: 47532)
+[2026-01-14 09:44:03.690] [WARNING] :: HIGH MEMORY USAGE    :: 81.4% Used (12.73 GB)
+[2026-01-14 09:44:04.519] [APP]     :: PROCESS STARTED      :: WmiPrvSE.exe (PID: 59716)
+[2026-01-14 09:44:04.519] [SYSTEM]  :: DISK I/O             :: Read: 3006516 MB | Write: 1254239 MB
+[2026-01-14 09:44:05.243] [WARNING] :: HIGH MEMORY USAGE    :: 81.4% Used (12.72 GB)
+[2026-01-14 09:44:06.522] [APP]     :: PROCESS ENDED        :: PID: 44948
+[2026-01-14 09:44:06.522] [APP]     :: PROCESS ENDED        :: PID: 47532
+[2026-01-14 09:44:06.799] [WARNING] :: HIGH MEMORY USAGE    :: 81.1% Used (12.68 GB)
+[2026-01-14 09:44:08.353] [WARNING] :: HIGH MEMORY USAGE    :: 80.9% Used (12.65 GB)
+[2026-01-14 09:44:09.527] [SYSTEM]  :: DISK I/O             :: Read: 3006517 MB | Write: 1254331 MB
+[2026-01-14 09:44:09.901] [WARNING] :: HIGH MEMORY USAGE    :: 80.7% Used (12.61 GB)
+[2026-01-14 09:44:11.461] [WARNING] :: HIGH MEMORY USAGE    :: 80.7% Used (12.62 GB)
+[2026-01-14 09:44:12.530] [APP]     :: PROCESS STARTED      :: powershell.exe (PID: 46272)
+[2026-01-14 09:44:12.531] [APP]     :: PROCESS STARTED      :: conhost.exe (PID: 56656)
+[2026-01-14 09:44:13.006] [WARNING] :: HIGH MEMORY USAGE    :: 80.5% Used (12.59 GB)
+[2026-01-14 09:44:14.533] [APP]     :: PROCESS STARTED      :: nvidia-smi.exe (PID: 37712)
+[2026-01-14 09:44:14.533] [APP]     :: PROCESS ENDED        :: PID: 46272
+[2026-01-14 09:44:14.533] [APP]     :: PROCESS ENDED        :: PID: 56656
+[2026-01-14 09:44:14.535] [SYSTEM]  :: DISK I/O             :: Read: 3006517 MB | Write: 1254337 MB
+[2026-01-14 09:44:14.565] [WARNING] :: HIGH MEMORY USAGE    :: 80.4% Used (12.57 GB)
+[2026-01-14 09:44:15.537] [SYSTEM]  :: WINDOW FOCUS         :: 'Untitled - Comet' (comet.exe : 32304)
+[2026-01-14 09:44:16.150] [WARNING] :: HIGH MEMORY USAGE    :: 86.0% Used (13.44 GB)
+[2026-01-14 09:44:16.539] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 59104)
+[2026-01-14 09:44:16.541] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 5984)
+[2026-01-14 09:44:16.541] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 56356)
+[2026-01-14 09:44:16.542] [APP]     :: PROCESS STARTED      :: cmd.exe (PID: 40644)
+[2026-01-14 09:44:16.542] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 5884)
+[2026-01-14 09:44:16.543] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 58440)
+[2026-01-14 09:44:16.543] [APP]     :: PROCESS STARTED      :: MbamBgNativeMsg.exe (PID: 50680)
+[2026-01-14 09:44:16.545] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 38456)
+[2026-01-14 09:44:16.545] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 41036)
+[2026-01-14 09:44:16.546] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 36204)
+[2026-01-14 09:44:16.547] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 3376)
+[2026-01-14 09:44:16.548] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 32304)
+[2026-01-14 09:44:16.548] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 17460)
+[2026-01-14 09:44:16.550] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 27636)
+[2026-01-14 09:44:16.550] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 1208)
+[2026-01-14 09:44:16.551] [APP]     :: PROCESS STARTED      :: conhost.exe (PID: 59996)
+[2026-01-14 09:44:16.551] [APP]     :: PROCESS STARTED      :: comet.exe (PID: 31960)
+[2026-01-14 09:44:16.552] [APP]     :: PROCESS ENDED        :: PID: 37712
+[2026-01-14 09:44:17.710] [WARNING] :: HIGH MEMORY USAGE    :: 80.6% Used (12.60 GB)
+[2026-01-14 09:44:18.555] [APP]     :: PROCESS ENDED        :: PID: 59104
+[2026-01-14 09:44:18.556] [APP]     :: PROCESS ENDED        :: PID: 5984
+[2026-01-14 09:44:18.556] [APP]     :: PROCESS ENDED        :: PID: 56356
+[2026-01-14 09:44:18.556] [APP]     :: PROCESS ENDED        :: PID: 58440
+[2026-01-14 09:44:18.556] [APP]     :: PROCESS ENDED        :: PID: 38456
+[2026-01-14 09:44:18.559] [APP]     :: PROCESS ENDED        :: PID: 41036
+[2026-01-14 09:44:18.559] [APP]     :: PROCESS ENDED        :: PID: 36204
+[2026-01-14 09:44:18.559] [APP]     :: PROCESS ENDED        :: PID: 3376
+[2026-01-14 09:44:18.559] [APP]     :: PROCESS ENDED        :: PID: 32304
+[2026-01-14 09:44:18.561] [APP]     :: PROCESS ENDED        :: PID: 17460
+[2026-01-14 09:44:18.561] [APP]     :: PROCESS ENDED        :: PID: 27636
+[2026-01-14 09:44:18.563] [APP]     :: PROCESS ENDED        :: PID: 1208
+[2026-01-14 09:44:18.563] [APP]     :: PROCESS ENDED        :: PID: 5884
+[2026-01-14 09:44:18.563] [APP]     :: PROCESS ENDED        :: PID: 31960
+[2026-01-14 09:44:19.265] [WARNING] :: HIGH MEMORY USAGE    :: 80.6% Used (12.59 GB)
+[2026-01-14 09:44:19.565] [SYSTEM]  :: DISK I/O             :: Read: 3007137 MB | Write: 1254356 MB
+[2026-01-14 09:44:20.815] [WARNING] :: HIGH MEMORY USAGE    :: 80.4% Used (12.57 GB)
+[2026-01-14 09:44:22.378] [WARNING] :: HIGH MEMORY USAGE    :: 80.2% Used (12.54 GB)
+[2026-01-14 09:44:23.588] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 34300)
+[2026-01-14 09:44:24.583] [SYSTEM]  :: GOD MODE DISABLED    :: Monitoring Stopped
+[2026-01-14 09:46:10.427] 
+  ___________________________________________________________
+ /                                                           \
+|    _____  ____  _____     __  __  ____  ____  ______        |
+|   / ____|/ __ \|  __ \   |  \/  |/ __ \|  _ \|  ____|       |
+|  | |  __| |  | | |  | |  | \  / | |  | | | | | |__          |
+|  | | |_ | |  | | |  | |  | |\/| | |  | | | | |  __|         |
+|  | |__| | |__| | |__| |  | |  | | |__| | |_| | |____        |
+|   \_____|\____/|_____/   |_|  |_|\____/|____/|______|       |
+|                                                             |
+ \___________________________________________________________/
+        
+[2026-01-14 09:46:10.427] [SYSTEM]  :: GOD MODE ENABLED     :: NUCLEAR MONITORING ACTIVE
+[2026-01-14 09:46:10.428] [SYSTEM]  :: OS SNAPSHOT          :: Initial Process Count: 484
+[2026-01-14 09:46:10.428] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 59676)
+[2026-01-14 09:46:10.431] [SYSTEM]  :: DISK I/O             :: Read: 3007180 MB | Write: 1254451 MB
+[2026-01-14 09:46:12.432] [APP]     :: PROCESS STARTED      :: powershell.exe (PID: 57520)
+[2026-01-14 09:46:12.432] [APP]     :: PROCESS STARTED      :: conhost.exe (PID: 59724)
+[2026-01-14 09:46:14.436] [APP]     :: PROCESS ENDED        :: PID: 57520
+[2026-01-14 09:46:14.436] [APP]     :: PROCESS ENDED        :: PID: 59724
+[2026-01-14 09:46:14.521] [SYSTEM]  :: GOD MODE DISABLED    :: Monitoring Stopped
+[2026-01-14 09:47:08.327] 
+  ___________________________________________________________
+ /                                                           \
+|    _____  ____  _____     __  __  ____  ____  ______        |
+|   / ____|/ __ \|  __ \   |  \/  |/ __ \|  _ \|  ____|       |
+|  | |  __| |  | | |  | |  | \  / | |  | | | | | |__          |
+|  | | |_ | |  | | |  | |  | |\/| | |  | | | | |  __|         |
+|  | |__| | |__| | |__| |  | |  | | |__| | |_| | |____        |
+|   \_____|\____/|_____/   |_|  |_|\____/|____/|______|       |
+|                                                             |
+ \___________________________________________________________/
+        
+[2026-01-14 09:47:08.327] [SYSTEM]  :: GOD MODE ENABLED     :: NUCLEAR MONITORING ACTIVE
+[2026-01-14 09:47:08.327] [SYSTEM]  :: OS SNAPSHOT          :: Initial Process Count: 483
+[2026-01-14 09:47:08.336] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 3192)
+[2026-01-14 09:47:08.341] [SYSTEM]  :: DISK I/O             :: Read: 3007192 MB | Write: 1254480 MB
+[2026-01-14 09:47:09.398] [SYSTEM]  :: GOD MODE DISABLED    :: Monitoring Stopped
+[2026-01-14 10:42:06.706] 
+  ___________________________________________________________
+ /                                                           \
+|    _____  ____  _____     __  __  ____  ____  ______        |
+|   / ____|/ __ \|  __ \   |  \/  |/ __ \|  _ \|  ____|       |
+|  | |  __| |  | | |  | |  | \  / | |  | | | | | |__          |
+|  | | |_ | |  | | |  | |  | |\/| | |  | | | | |  __|         |
+|  | |__| | |__| | |__| |  | |  | | |__| | |_| | |____        |
+|   \_____|\____/|_____/   |_|  |_|\____/|____/|______|       |
+|                                                             |
+ \___________________________________________________________/
+        
+[2026-01-14 10:42:06.709] [SYSTEM]  :: GOD MODE ENABLED     :: NUCLEAR MONITORING ACTIVE
+[2026-01-14 10:42:06.712] [SYSTEM]  :: OS SNAPSHOT          :: Initial Process Count: 485
+[2026-01-14 10:42:06.725] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 49536)
+[2026-01-14 10:42:06.727] [SYSTEM]  :: DISK I/O             :: Read: 3024817 MB | Write: 1257359 MB
+[2026-01-14 10:42:06.959] [WARNING] :: HIGH MEMORY USAGE    :: 82.5% Used (12.90 GB)
+[2026-01-14 10:42:08.515] [WARNING] :: HIGH MEMORY USAGE    :: 82.5% Used (12.89 GB)
+[2026-01-14 10:42:08.729] [APP]     :: PROCESS ENDED        :: PID: 41340
+[2026-01-14 10:42:10.168] [WARNING] :: HIGH MEMORY USAGE    :: 82.4% Used (12.88 GB)
+[2026-01-14 10:42:11.718] [WARNING] :: HIGH MEMORY USAGE    :: 82.4% Used (12.88 GB)
+[2026-01-14 10:42:11.733] [SYSTEM]  :: DISK I/O             :: Read: 3024817 MB | Write: 1257359 MB
+[2026-01-14 10:42:12.235] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 49536)
+[2026-01-14 10:42:13.268] [WARNING] :: HIGH MEMORY USAGE    :: 82.6% Used (12.92 GB)
+[2026-01-14 10:42:14.836] [WARNING] :: HIGH MEMORY USAGE    :: 82.6% Used (12.92 GB)
+[2026-01-14 10:42:16.386] [WARNING] :: HIGH MEMORY USAGE    :: 82.3% Used (12.87 GB)
+[2026-01-14 10:42:16.741] [SYSTEM]  :: DISK I/O             :: Read: 3024817 MB | Write: 1257359 MB
+[2026-01-14 10:42:17.952] [WARNING] :: HIGH MEMORY USAGE    :: 82.3% Used (12.87 GB)
+[2026-01-14 10:42:19.504] [WARNING] :: HIGH MEMORY USAGE    :: 82.3% Used (12.87 GB)
+[2026-01-14 10:42:21.061] [WARNING] :: HIGH MEMORY USAGE    :: 82.4% Used (12.89 GB)
+[2026-01-14 10:42:21.536] [ERROR]   :: UNCAUGHT EXCEPTION   :: AttributeError: 'MainWindow' object has no attribute 'clipboard_manager'
+Traceback (most recent call last):
+  File "D:\PROJECTS\TOOLS\SmartBoard\src\ui\main_window.py", line 590, in show_creation_window
+    self.creation_win = CreationWindow(self.clipboard_manager)
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute 'clipboard_manager'
+
+[2026-01-14 10:42:21.749] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 49536)
+[2026-01-14 10:42:21.749] [SYSTEM]  :: DISK I/O             :: Read: 3024817 MB | Write: 1257360 MB
+[2026-01-14 10:42:22.627] [WARNING] :: HIGH MEMORY USAGE    :: 82.4% Used (12.89 GB)
+[2026-01-14 10:42:24.188] [WARNING] :: HIGH MEMORY USAGE    :: 82.4% Used (12.88 GB)
+[2026-01-14 10:42:25.754] [WARNING] :: HIGH MEMORY USAGE    :: 82.4% Used (12.88 GB)
+[2026-01-14 10:42:26.760] [SYSTEM]  :: DISK I/O             :: Read: 3024817 MB | Write: 1257360 MB
+[2026-01-14 10:42:27.248] [ERROR]   :: UNCAUGHT EXCEPTION   :: AttributeError: 'MainWindow' object has no attribute 'clipboard_manager'
+Traceback (most recent call last):
+  File "D:\PROJECTS\TOOLS\SmartBoard\src\ui\main_window.py", line 590, in show_creation_window
+    self.creation_win = CreationWindow(self.clipboard_manager)
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute 'clipboard_manager'
+
+[2026-01-14 10:42:27.314] [WARNING] :: HIGH MEMORY USAGE    :: 82.4% Used (12.89 GB)
+[2026-01-14 10:42:28.871] [WARNING] :: HIGH MEMORY USAGE    :: 82.4% Used (12.88 GB)
+[2026-01-14 10:42:30.609] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 49536)
+[2026-01-14 10:42:30.609] [WARNING] :: HIGH MEMORY USAGE    :: 82.3% Used (12.87 GB)
+[2026-01-14 10:42:32.114] [SYSTEM]  :: DISK I/O             :: Read: 3024818 MB | Write: 1257361 MB
+[2026-01-14 10:42:32.161] [WARNING] :: HIGH MEMORY USAGE    :: 82.3% Used (12.87 GB)
+[2026-01-14 10:42:33.715] [WARNING] :: HIGH MEMORY USAGE    :: 82.3% Used (12.87 GB)
+[2026-01-14 10:42:35.262] [WARNING] :: HIGH MEMORY USAGE    :: 82.3% Used (12.87 GB)
+[2026-01-14 10:42:36.826] [WARNING] :: HIGH MEMORY USAGE    :: 82.3% Used (12.87 GB)
+[2026-01-14 10:42:37.121] [SYSTEM]  :: DISK I/O             :: Read: 3024818 MB | Write: 1257361 MB
+[2026-01-14 10:42:38.387] [WARNING] :: HIGH MEMORY USAGE    :: 82.3% Used (12.87 GB)
+[2026-01-14 10:42:38.623] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 49536)
+[2026-01-14 10:42:39.941] [WARNING] :: HIGH MEMORY USAGE    :: 82.3% Used (12.87 GB)
+[2026-01-14 10:42:40.638] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 49536)
+[2026-01-14 10:42:41.506] [WARNING] :: HIGH MEMORY USAGE    :: 82.3% Used (12.87 GB)
+[2026-01-14 10:42:42.141] [SYSTEM]  :: DISK I/O             :: Read: 3024820 MB | Write: 1257362 MB
+[2026-01-14 10:42:43.067] [WARNING] :: HIGH MEMORY USAGE    :: 82.4% Used (12.89 GB)
+[2026-01-14 10:42:43.143] [APP]     :: PROCESS STARTED      :: conhost.exe (PID: 60096)
+[2026-01-14 10:42:43.143] [APP]     :: PROCESS STARTED      :: powershell.exe (PID: 37556)
+[2026-01-14 10:43:43.525] 
+  ___________________________________________________________
+ /                                                           \
+|    _____  ____  _____     __  __  ____  ____  ______        |
+|   / ____|/ __ \|  __ \   |  \/  |/ __ \|  _ \|  ____|       |
+|  | |  __| |  | | |  | |  | \  / | |  | | | | | |__          |
+|  | | |_ | |  | | |  | |  | |\/| | |  | | | | |  __|         |
+|  | |__| | |__| | |__| |  | |  | | |__| | |_| | |____        |
+|   \_____|\____/|_____/   |_|  |_|\____/|____/|______|       |
+|                                                             |
+ \___________________________________________________________/
+        
+[2026-01-14 10:43:43.525] [SYSTEM]  :: GOD MODE ENABLED     :: NUCLEAR MONITORING ACTIVE
+[2026-01-14 10:43:43.528] [SYSTEM]  :: OS SNAPSHOT          :: Initial Process Count: 487
+[2026-01-14 10:43:43.538] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 49744)
+[2026-01-14 10:43:43.539] [SYSTEM]  :: DISK I/O             :: Read: 3024853 MB | Write: 1257377 MB
+[2026-01-14 10:43:45.025] [WARNING] :: HIGH MEMORY USAGE    :: 84.0% Used (13.13 GB)
+[2026-01-14 10:43:45.544] [APP]     :: PROCESS ENDED        :: PID: 58816
+[2026-01-14 10:43:45.545] [APP]     :: PROCESS ENDED        :: PID: 47276
+[2026-01-14 10:43:46.577] [WARNING] :: HIGH MEMORY USAGE    :: 84.0% Used (13.13 GB)
+[2026-01-14 10:43:48.059] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 49744)
+[2026-01-14 10:43:48.136] [WARNING] :: HIGH MEMORY USAGE    :: 84.0% Used (13.13 GB)
+[2026-01-14 10:43:48.562] [SYSTEM]  :: DISK I/O             :: Read: 3024854 MB | Write: 1257377 MB
+[2026-01-14 10:43:49.685] [WARNING] :: HIGH MEMORY USAGE    :: 84.5% Used (13.21 GB)
+[2026-01-14 10:43:51.234] [WARNING] :: HIGH MEMORY USAGE    :: 84.5% Used (13.21 GB)
+[2026-01-14 10:43:52.782] [WARNING] :: HIGH MEMORY USAGE    :: 84.5% Used (13.21 GB)
+[2026-01-14 10:43:53.568] [SYSTEM]  :: DISK I/O             :: Read: 3024855 MB | Write: 1257401 MB
+[2026-01-14 10:43:54.122] [SYSTEM]  :: WINDOW FOCUS         :: 'Select File' (python.exe : 49744)
+[2026-01-14 10:43:54.345] [WARNING] :: HIGH MEMORY USAGE    :: 84.6% Used (13.22 GB)
+[2026-01-14 10:43:55.626] [APP]     :: PROCESS STARTED      :: WUDFHost.exe (PID: 41840)
+[2026-01-14 10:43:55.907] [WARNING] :: HIGH MEMORY USAGE    :: 84.9% Used (13.27 GB)
+[2026-01-14 10:43:57.456] [WARNING] :: HIGH MEMORY USAGE    :: 84.9% Used (13.28 GB)
+[2026-01-14 10:43:58.629] [SYSTEM]  :: DISK I/O             :: Read: 3024906 MB | Write: 1257403 MB
+[2026-01-14 10:43:59.014] [WARNING] :: HIGH MEMORY USAGE    :: 84.9% Used (13.28 GB)
+[2026-01-14 10:44:00.565] [WARNING] :: HIGH MEMORY USAGE    :: 85.0% Used (13.29 GB)
+[2026-01-14 10:44:01.707] [SYSTEM]  :: WINDOW FOCUS         :: 'Select File' (python.exe : 49744)
+[2026-01-14 10:44:02.133] [WARNING] :: HIGH MEMORY USAGE    :: 85.0% Used (13.30 GB)
+[2026-01-14 10:44:02.221] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 49744)
+[2026-01-14 10:44:03.665] [ERROR]   :: UNCAUGHT EXCEPTION   :: AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+Traceback (most recent call last):
+  File "D:\PROJECTS\TOOLS\SmartBoard\src\ui\creation_window.py", line 132, in inject_file
+    self.clipboard_manager.add_item('file', path)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+
+[2026-01-14 10:44:03.685] [WARNING] :: HIGH MEMORY USAGE    :: 84.9% Used (13.28 GB)
+[2026-01-14 10:44:03.724] [SYSTEM]  :: DISK I/O             :: Read: 3024917 MB | Write: 1257407 MB
+[2026-01-14 10:44:05.236] [WARNING] :: HIGH MEMORY USAGE    :: 84.9% Used (13.28 GB)
+[2026-01-14 10:44:05.679] [ERROR]   :: UNCAUGHT EXCEPTION   :: AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+Traceback (most recent call last):
+  File "D:\PROJECTS\TOOLS\SmartBoard\src\ui\creation_window.py", line 132, in inject_file
+    self.clipboard_manager.add_item('file', path)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+
+[2026-01-14 10:44:06.800] [WARNING] :: HIGH MEMORY USAGE    :: 84.9% Used (13.27 GB)
+[2026-01-14 10:44:06.859] [ERROR]   :: UNCAUGHT EXCEPTION   :: AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+Traceback (most recent call last):
+  File "D:\PROJECTS\TOOLS\SmartBoard\src\ui\creation_window.py", line 132, in inject_file
+    self.clipboard_manager.add_item('file', path)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+
+[2026-01-14 10:44:07.027] [ERROR]   :: UNCAUGHT EXCEPTION   :: AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+Traceback (most recent call last):
+  File "D:\PROJECTS\TOOLS\SmartBoard\src\ui\creation_window.py", line 132, in inject_file
+    self.clipboard_manager.add_item('file', path)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+
+[2026-01-14 10:44:07.191] [ERROR]   :: UNCAUGHT EXCEPTION   :: AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+Traceback (most recent call last):
+  File "D:\PROJECTS\TOOLS\SmartBoard\src\ui\creation_window.py", line 132, in inject_file
+    self.clipboard_manager.add_item('file', path)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+
+[2026-01-14 10:44:07.341] [ERROR]   :: UNCAUGHT EXCEPTION   :: AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+Traceback (most recent call last):
+  File "D:\PROJECTS\TOOLS\SmartBoard\src\ui\creation_window.py", line 132, in inject_file
+    self.clipboard_manager.add_item('file', path)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+
+[2026-01-14 10:44:07.480] [ERROR]   :: UNCAUGHT EXCEPTION   :: AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+Traceback (most recent call last):
+  File "D:\PROJECTS\TOOLS\SmartBoard\src\ui\creation_window.py", line 132, in inject_file
+    self.clipboard_manager.add_item('file', path)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+
+[2026-01-14 10:44:07.625] [ERROR]   :: UNCAUGHT EXCEPTION   :: AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+Traceback (most recent call last):
+  File "D:\PROJECTS\TOOLS\SmartBoard\src\ui\creation_window.py", line 132, in inject_file
+    self.clipboard_manager.add_item('file', path)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+
+[2026-01-14 10:44:07.786] [ERROR]   :: UNCAUGHT EXCEPTION   :: AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+Traceback (most recent call last):
+  File "D:\PROJECTS\TOOLS\SmartBoard\src\ui\creation_window.py", line 132, in inject_file
+    self.clipboard_manager.add_item('file', path)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+
+[2026-01-14 10:44:08.364] [WARNING] :: HIGH MEMORY USAGE    :: 84.9% Used (13.27 GB)
+[2026-01-14 10:44:08.734] [SYSTEM]  :: DISK I/O             :: Read: 3024918 MB | Write: 1257407 MB
+[2026-01-14 10:44:09.909] [WARNING] :: HIGH MEMORY USAGE    :: 84.9% Used (13.28 GB)
+[2026-01-14 10:44:11.464] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 10:44:13.013] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 10:44:13.741] [APP]     :: PROCESS STARTED      :: powershell.exe (PID: 58912)
+[2026-01-14 10:44:13.741] [APP]     :: PROCESS STARTED      :: conhost.exe (PID: 48108)
+[2026-01-14 10:44:13.741] [SYSTEM]  :: DISK I/O             :: Read: 3024920 MB | Write: 1257407 MB
+[2026-01-14 10:44:14.562] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 10:44:15.418] [ERROR]   :: UNCAUGHT EXCEPTION   :: AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+Traceback (most recent call last):
+  File "D:\PROJECTS\TOOLS\SmartBoard\src\ui\creation_window.py", line 125, in inject_text
+    self.clipboard_manager.add_item('text', text)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClipboardManager' object has no attribute 'add_item'
+
+[2026-01-14 10:44:15.746] [APP]     :: PROCESS ENDED        :: PID: 58912
+[2026-01-14 10:44:15.746] [APP]     :: PROCESS ENDED        :: PID: 48108
+[2026-01-14 10:44:16.116] [WARNING] :: HIGH MEMORY USAGE    :: 84.7% Used (13.24 GB)
+[2026-01-14 10:44:16.748] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 49744)
+[2026-01-14 10:44:17.673] [WARNING] :: HIGH MEMORY USAGE    :: 84.6% Used (13.23 GB)
+[2026-01-14 10:44:18.751] [SYSTEM]  :: DISK I/O             :: Read: 3024925 MB | Write: 1257413 MB
+[2026-01-14 10:44:19.223] [WARNING] :: HIGH MEMORY USAGE    :: 84.7% Used (13.24 GB)
+[2026-01-14 10:44:20.777] [WARNING] :: HIGH MEMORY USAGE    :: 84.7% Used (13.24 GB)
+[2026-01-14 10:44:22.335] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.25 GB)
+[2026-01-14 10:44:23.759] [SYSTEM]  :: DISK I/O             :: Read: 3024926 MB | Write: 1257422 MB
+[2026-01-14 10:44:23.888] [WARNING] :: HIGH MEMORY USAGE    :: 84.7% Used (13.25 GB)
+[2026-01-14 10:44:24.273] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 49744)
+[2026-01-14 10:44:25.443] [WARNING] :: HIGH MEMORY USAGE    :: 84.7% Used (13.25 GB)
+[2026-01-14 10:44:26.777] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 49744)
+[2026-01-14 10:44:26.995] [WARNING] :: HIGH MEMORY USAGE    :: 84.7% Used (13.25 GB)
+[2026-01-14 11:03:17.808] 
+  ___________________________________________________________
+ /                                                           \
+|    _____  ____  _____     __  __  ____  ____  ______        |
+|   / ____|/ __ \|  __ \   |  \/  |/ __ \|  _ \|  ____|       |
+|  | |  __| |  | | |  | |  | \  / | |  | | | | | |__          |
+|  | | |_ | |  | | |  | |  | |\/| | |  | | | | |  __|         |
+|  | |__| | |__| | |__| |  | |  | | |__| | |_| | |____        |
+|   \_____|\____/|_____/   |_|  |_|\____/|____/|______|       |
+|                                                             |
+ \___________________________________________________________/
+        
+[2026-01-14 11:03:17.808] [SYSTEM]  :: GOD MODE ENABLED     :: NUCLEAR MONITORING ACTIVE
+[2026-01-14 11:03:17.808] [SYSTEM]  :: OS SNAPSHOT          :: Initial Process Count: 484
+[2026-01-14 11:03:17.822] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 59628)
+[2026-01-14 11:03:17.822] [SYSTEM]  :: DISK I/O             :: Read: 3025409 MB | Write: 1259232 MB
+[2026-01-14 11:03:18.654] [WARNING] :: HIGH MEMORY USAGE    :: 83.8% Used (13.10 GB)
+[2026-01-14 11:03:19.326] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 59628)
+[2026-01-14 11:03:20.212] [WARNING] :: HIGH MEMORY USAGE    :: 83.8% Used (13.10 GB)
+[2026-01-14 11:03:21.771] [WARNING] :: HIGH MEMORY USAGE    :: 83.8% Used (13.10 GB)
+[2026-01-14 11:03:22.830] [SYSTEM]  :: DISK I/O             :: Read: 3025409 MB | Write: 1259233 MB
+[2026-01-14 11:03:23.322] [WARNING] :: HIGH MEMORY USAGE    :: 83.8% Used (13.10 GB)
+[2026-01-14 11:03:24.884] [WARNING] :: HIGH MEMORY USAGE    :: 83.8% Used (13.10 GB)
+[2026-01-14 11:03:26.437] [WARNING] :: HIGH MEMORY USAGE    :: 83.8% Used (13.10 GB)
+[2026-01-14 11:03:28.081] [SYSTEM]  :: WINDOW FOCUS         :: 'SmartBoard - Antigravity - logs.md' (Antigravity.exe : 6276)
+[2026-01-14 11:03:28.081] [WARNING] :: HIGH MEMORY USAGE    :: 83.7% Used (13.08 GB)
+[2026-01-14 11:03:28.084] [SYSTEM]  :: DISK I/O             :: Read: 3025409 MB | Write: 1259234 MB
+[2026-01-14 11:03:29.649] [WARNING] :: HIGH MEMORY USAGE    :: 83.6% Used (13.07 GB)
+[2026-01-14 11:03:31.088] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 59628)
+[2026-01-14 11:03:31.201] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.06 GB)
+[2026-01-14 11:03:32.759] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.04 GB)
+[2026-01-14 11:03:33.091] [SYSTEM]  :: DISK I/O             :: Read: 3025410 MB | Write: 1259253 MB
+[2026-01-14 11:03:34.094] [SYSTEM]  :: WINDOW FOCUS         :: 'SmartBoard - Antigravity - logs.md' (Antigravity.exe : 6276)
+[2026-01-14 11:03:34.334] [WARNING] :: HIGH MEMORY USAGE    :: 83.2% Used (13.01 GB)
+[2026-01-14 11:03:35.598] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 59628)
+[2026-01-14 11:03:35.882] [WARNING] :: HIGH MEMORY USAGE    :: 83.1% Used (13.00 GB)
+[2026-01-14 11:08:51.308] 
+  ___________________________________________________________
+ /                                                           \
+|    _____  ____  _____     __  __  ____  ____  ______        |
+|   / ____|/ __ \|  __ \   |  \/  |/ __ \|  _ \|  ____|       |
+|  | |  __| |  | | |  | |  | \  / | |  | | | | | |__          |
+|  | | |_ | |  | | |  | |  | |\/| | |  | | | | |  __|         |
+|  | |__| | |__| | |__| |  | |  | | |__| | |_| | |____        |
+|   \_____|\____/|_____/   |_|  |_|\____/|____/|______|       |
+|                                                             |
+ \___________________________________________________________/
+        
+[2026-01-14 11:08:51.314] [SYSTEM]  :: GOD MODE ENABLED     :: NUCLEAR MONITORING ACTIVE
+[2026-01-14 11:08:51.316] [SYSTEM]  :: OS SNAPSHOT          :: Initial Process Count: 490
+[2026-01-14 11:08:51.327] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 51940)
+[2026-01-14 11:08:51.327] [SYSTEM]  :: DISK I/O             :: Read: 3027168 MB | Write: 1260172 MB
+[2026-01-14 11:08:52.331] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 51940)
+[2026-01-14 11:08:53.332] [APP]     :: PROCESS STARTED      :: cmd.exe (PID: 53704)
+[2026-01-14 11:08:53.332] [APP]     :: PROCESS STARTED      :: nvidia-smi.exe (PID: 43404)
+[2026-01-14 11:08:53.332] [APP]     :: PROCESS STARTED      :: wt.exe (PID: 39484)
+[2026-01-14 11:08:53.334] [APP]     :: PROCESS STARTED      :: AvEmUpdate.exe (PID: 50896)
+[2026-01-14 11:08:54.944] [WARNING] :: HIGH MEMORY USAGE    :: 81.0% Used (12.66 GB)
+[2026-01-14 11:08:55.337] [APP]     :: PROCESS STARTED      :: ctfmon.exe (PID: 13120)
+[2026-01-14 11:08:55.337] [APP]     :: PROCESS STARTED      :: consent.exe (PID: 38964)
+[2026-01-14 11:08:55.337] [APP]     :: PROCESS ENDED        :: PID: 53704
+[2026-01-14 11:08:55.337] [APP]     :: PROCESS ENDED        :: PID: 43404
+[2026-01-14 11:08:55.337] [APP]     :: PROCESS ENDED        :: PID: 39484
+[2026-01-14 11:08:55.840] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 51940)
+[2026-01-14 11:08:56.341] [SYSTEM]  :: DISK I/O             :: Read: 3027279 MB | Write: 1260175 MB
+[2026-01-14 11:08:56.514] [WARNING] :: HIGH MEMORY USAGE    :: 80.8% Used (12.64 GB)
+[2026-01-14 11:08:56.842] [SYSTEM]  :: WINDOW FOCUS         :: 'Administrator: Windows PowerShell' (WindowsTerminal.exe : 59276)
+[2026-01-14 11:08:57.344] [APP]     :: PROCESS STARTED      :: OpenConsole.exe (PID: 33140)
+[2026-01-14 11:08:57.344] [APP]     :: PROCESS STARTED      :: WindowsTerminal.exe (PID: 59276)
+[2026-01-14 11:08:57.344] [APP]     :: PROCESS STARTED      :: powershell.exe (PID: 59756)
+[2026-01-14 11:08:57.345] [APP]     :: PROCESS ENDED        :: PID: 38964
+[2026-01-14 11:08:57.846] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 51940)
+[2026-01-14 11:08:58.090] [WARNING] :: HIGH MEMORY USAGE    :: 81.5% Used (12.74 GB)
+[2026-01-14 11:08:58.347] [SYSTEM]  :: WINDOW FOCUS         :: 'Task Manager' (Taskmgr.exe : 44560)
+[2026-01-14 11:08:59.348] [APP]     :: PROCESS STARTED      :: Taskmgr.exe (PID: 44560)
+[2026-01-14 11:08:59.348] [APP]     :: PROCESS ENDED        :: PID: 13120
+[2026-01-14 11:08:59.664] [WARNING] :: HIGH MEMORY USAGE    :: 81.8% Used (12.79 GB)
+[2026-01-14 11:09:01.231] [WARNING] :: HIGH MEMORY USAGE    :: 81.9% Used (12.81 GB)
+[2026-01-14 11:09:01.352] [SYSTEM]  :: DISK I/O             :: Read: 3027448 MB | Write: 1260180 MB
+[2026-01-14 11:09:02.949] [WARNING] :: HIGH MEMORY USAGE    :: 82.1% Used (12.83 GB)
+[2026-01-14 11:09:04.515] [WARNING] :: HIGH MEMORY USAGE    :: 82.0% Used (12.82 GB)
+[2026-01-14 11:09:05.357] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 51940)
+[2026-01-14 11:09:05.358] [APP]     :: PROCESS ENDED        :: PID: 50896
+[2026-01-14 11:09:06.077] [WARNING] :: HIGH MEMORY USAGE    :: 81.8% Used (12.79 GB)
+[2026-01-14 11:09:06.360] [SYSTEM]  :: DISK I/O             :: Read: 3027462 MB | Write: 1260189 MB
+[2026-01-14 11:09:06.861] [SYSTEM]  :: WINDOW FOCUS         :: 'Task Manager' (Taskmgr.exe : 44560)
+[2026-01-14 11:09:07.631] [WARNING] :: HIGH MEMORY USAGE    :: 81.9% Used (12.81 GB)
+[2026-01-14 11:09:09.190] [WARNING] :: HIGH MEMORY USAGE    :: 81.9% Used (12.81 GB)
+[2026-01-14 11:09:10.367] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 51940)
+[2026-01-14 11:09:10.748] [WARNING] :: HIGH MEMORY USAGE    :: 82.0% Used (12.81 GB)
+[2026-01-14 11:09:11.371] [SYSTEM]  :: DISK I/O             :: Read: 3027465 MB | Write: 1260194 MB
+[2026-01-14 11:09:12.298] [WARNING] :: HIGH MEMORY USAGE    :: 81.9% Used (12.81 GB)
+[2026-01-14 11:09:12.873] [SYSTEM]  :: WINDOW FOCUS         :: 'Task Manager' (Taskmgr.exe : 44560)
+[2026-01-14 11:09:13.375] [APP]     :: PROCESS STARTED      :: powershell.exe (PID: 56352)
+[2026-01-14 11:09:13.865] [WARNING] :: HIGH MEMORY USAGE    :: 82.2% Used (12.85 GB)
+[2026-01-14 11:09:15.379] [APP]     :: PROCESS STARTED      :: nvidia-smi.exe (PID: 49412)
+[2026-01-14 11:09:15.381] [APP]     :: PROCESS ENDED        :: PID: 56352
+[2026-01-14 11:09:15.417] [WARNING] :: HIGH MEMORY USAGE    :: 81.9% Used (12.81 GB)
+[2026-01-14 11:09:15.895] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 51940)
+[2026-01-14 11:09:16.397] [SYSTEM]  :: DISK I/O             :: Read: 3027467 MB | Write: 1260196 MB
+[2026-01-14 11:09:16.978] [WARNING] :: HIGH MEMORY USAGE    :: 81.2% Used (12.69 GB)
+[2026-01-14 11:09:17.399] [APP]     :: PROCESS ENDED        :: PID: 44560
+[2026-01-14 11:09:17.399] [APP]     :: PROCESS ENDED        :: PID: 49412
+[2026-01-14 11:09:18.527] [WARNING] :: HIGH MEMORY USAGE    :: 81.2% Used (12.69 GB)
+[2026-01-14 11:09:20.088] [WARNING] :: HIGH MEMORY USAGE    :: 81.2% Used (12.69 GB)
+[2026-01-14 11:09:21.405] [SYSTEM]  :: DISK I/O             :: Read: 3027468 MB | Write: 1260196 MB
+[2026-01-14 11:09:21.634] [WARNING] :: HIGH MEMORY USAGE    :: 81.2% Used (12.70 GB)
+[2026-01-14 11:09:23.191] [WARNING] :: HIGH MEMORY USAGE    :: 81.2% Used (12.70 GB)
+[2026-01-14 11:22:03.291] 
+  ___________________________________________________________
+ /                                                           \
+|    _____  ____  _____     __  __  ____  ____  ______        |
+|   / ____|/ __ \|  __ \   |  \/  |/ __ \|  _ \|  ____|       |
+|  | |  __| |  | | |  | |  | \  / | |  | | | | | |__          |
+|  | | |_ | |  | | |  | |  | |\/| | |  | | | | |  __|         |
+|  | |__| | |__| | |__| |  | |  | | |__| | |_| | |____        |
+|   \_____|\____/|_____/   |_|  |_|\____/|____/|______|       |
+|                                                             |
+ \___________________________________________________________/
+        
+[2026-01-14 11:22:03.294] [SYSTEM]  :: GOD MODE ENABLED     :: NUCLEAR MONITORING ACTIVE
+[2026-01-14 11:22:03.294] [SYSTEM]  :: OS SNAPSHOT          :: Initial Process Count: 490
+[2026-01-14 11:22:03.306] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 51020)
+[2026-01-14 11:22:03.306] [SYSTEM]  :: DISK I/O             :: Read: 3030499 MB | Write: 1260834 MB
+[2026-01-14 11:22:04.548] [WARNING] :: HIGH MEMORY USAGE    :: 83.6% Used (13.07 GB)
+[2026-01-14 11:22:06.106] [WARNING] :: HIGH MEMORY USAGE    :: 83.6% Used (13.07 GB)
+[2026-01-14 11:22:07.665] [WARNING] :: HIGH MEMORY USAGE    :: 83.6% Used (13.07 GB)
+[2026-01-14 11:22:08.314] [SYSTEM]  :: DISK I/O             :: Read: 3030500 MB | Write: 1260835 MB
+[2026-01-14 11:22:09.219] [WARNING] :: HIGH MEMORY USAGE    :: 83.6% Used (13.07 GB)
+[2026-01-14 11:22:09.317] [APP]     :: PROCESS ENDED        :: PID: 60328
+[2026-01-14 11:22:10.777] [WARNING] :: HIGH MEMORY USAGE    :: 83.6% Used (13.07 GB)
+[2026-01-14 11:22:12.328] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.06 GB)
+[2026-01-14 11:22:13.321] [SYSTEM]  :: DISK I/O             :: Read: 3030501 MB | Write: 1260835 MB
+[2026-01-14 11:22:13.886] [WARNING] :: HIGH MEMORY USAGE    :: 83.8% Used (13.10 GB)
+[2026-01-14 11:22:15.436] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.06 GB)
+[2026-01-14 11:22:16.991] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.05 GB)
+[2026-01-14 11:22:18.329] [SYSTEM]  :: DISK I/O             :: Read: 3030506 MB | Write: 1260843 MB
+[2026-01-14 11:22:18.543] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.05 GB)
+[2026-01-14 11:22:20.104] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.05 GB)
+[2026-01-14 11:22:21.653] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.05 GB)
+[2026-01-14 11:22:23.220] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.05 GB)
+[2026-01-14 11:22:23.337] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 51020)
+[2026-01-14 11:22:23.339] [SYSTEM]  :: DISK I/O             :: Read: 3030524 MB | Write: 1260851 MB
+[2026-01-14 11:22:24.780] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.05 GB)
+[2026-01-14 11:22:26.341] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.04 GB)
+[2026-01-14 11:22:27.894] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.04 GB)
+[2026-01-14 11:22:28.344] [SYSTEM]  :: DISK I/O             :: Read: 3030526 MB | Write: 1260871 MB
+[2026-01-14 11:22:29.446] [WARNING] :: HIGH MEMORY USAGE    :: 83.3% Used (13.02 GB)
+[2026-01-14 11:22:31.003] [WARNING] :: HIGH MEMORY USAGE    :: 83.0% Used (12.98 GB)
+[2026-01-14 11:22:32.564] [WARNING] :: HIGH MEMORY USAGE    :: 83.0% Used (12.98 GB)
+[2026-01-14 11:22:33.351] [SYSTEM]  :: DISK I/O             :: Read: 3030527 MB | Write: 1260888 MB
+[2026-01-14 11:22:34.116] [WARNING] :: HIGH MEMORY USAGE    :: 83.0% Used (12.98 GB)
+[2026-01-14 11:22:35.355] [APP]     :: PROCESS STARTED      :: SDXHelper.exe (PID: 22204)
+[2026-01-14 11:22:35.675] [WARNING] :: HIGH MEMORY USAGE    :: 83.1% Used (13.00 GB)
+[2026-01-14 11:22:37.235] [WARNING] :: HIGH MEMORY USAGE    :: 83.2% Used (13.01 GB)
+[2026-01-14 11:22:38.358] [SYSTEM]  :: WINDOW FOCUS         :: 'Task Manager' (Taskmgr.exe : 54464)
+[2026-01-14 11:22:38.360] [SYSTEM]  :: DISK I/O             :: Read: 3030556 MB | Write: 1260890 MB
+[2026-01-14 11:22:38.793] [WARNING] :: HIGH MEMORY USAGE    :: 83.6% Used (13.08 GB)
+[2026-01-14 11:22:39.362] [APP]     :: PROCESS STARTED      :: Taskmgr.exe (PID: 54464)
+[2026-01-14 11:22:39.362] [APP]     :: PROCESS ENDED        :: PID: 22204
+[2026-01-14 11:22:40.348] [WARNING] :: HIGH MEMORY USAGE    :: 83.3% Used (13.02 GB)
+[2026-01-14 11:22:41.369] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 51020)
+[2026-01-14 11:22:41.902] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.05 GB)
+[2026-01-14 11:22:43.372] [SYSTEM]  :: DISK I/O             :: Read: 3030559 MB | Write: 1260897 MB
+[2026-01-14 11:22:43.458] [WARNING] :: HIGH MEMORY USAGE    :: 83.6% Used (13.07 GB)
+[2026-01-14 11:22:44.375] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 51020)
+[2026-01-14 11:22:45.021] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.06 GB)
+[2026-01-14 11:22:45.878] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 51020)
+[2026-01-14 11:22:46.586] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.05 GB)
+[2026-01-14 11:22:47.380] [SYSTEM]  :: WINDOW FOCUS         :: 'Task Manager' (Taskmgr.exe : 54464)
+[2026-01-14 11:22:48.148] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.04 GB)
+[2026-01-14 11:22:48.382] [SYSTEM]  :: DISK I/O             :: Read: 3030565 MB | Write: 1260900 MB
+[2026-01-14 11:22:48.886] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 51020)
+[2026-01-14 11:22:49.699] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.04 GB)
+[2026-01-14 11:22:51.260] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.04 GB)
+[2026-01-14 11:22:52.819] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.03 GB)
+[2026-01-14 11:22:53.395] [SYSTEM]  :: DISK I/O             :: Read: 3030569 MB | Write: 1260900 MB
+[2026-01-14 11:22:54.377] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.03 GB)
+[2026-01-14 11:22:55.935] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.03 GB)
+[2026-01-14 11:22:57.491] [WARNING] :: HIGH MEMORY USAGE    :: 83.4% Used (13.05 GB)
+[2026-01-14 11:22:58.401] [SYSTEM]  :: DISK I/O             :: Read: 3030571 MB | Write: 1260900 MB
+[2026-01-14 11:22:59.046] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.05 GB)
+[2026-01-14 11:23:00.593] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.05 GB)
+[2026-01-14 11:23:02.151] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.05 GB)
+[2026-01-14 11:23:03.409] [APP]     :: PROCESS STARTED      :: conhost.exe (PID: 59020)
+[2026-01-14 11:23:03.409] [APP]     :: PROCESS STARTED      :: AsusSystemAnalysis.exe (PID: 39444)
+[2026-01-14 11:23:03.409] [SYSTEM]  :: DISK I/O             :: Read: 3030574 MB | Write: 1260901 MB
+[2026-01-14 11:23:03.702] [WARNING] :: HIGH MEMORY USAGE    :: 83.5% Used (13.05 GB)
+[2026-01-14 11:31:49.776] 
+  ___________________________________________________________
+ /                                                           \
+|    _____  ____  _____     __  __  ____  ____  ______        |
+|   / ____|/ __ \|  __ \   |  \/  |/ __ \|  _ \|  ____|       |
+|  | |  __| |  | | |  | |  | \  / | |  | | | | | |__          |
+|  | | |_ | |  | | |  | |  | |\/| | |  | | | | |  __|         |
+|  | |__| | |__| | |__| |  | |  | | |__| | |_| | |____        |
+|   \_____|\____/|_____/   |_|  |_|\____/|____/|______|       |
+|                                                             |
+ \___________________________________________________________/
+        
+[2026-01-14 11:31:49.778] [SYSTEM]  :: GOD MODE ENABLED     :: NUCLEAR MONITORING ACTIVE
+[2026-01-14 11:31:49.779] [SYSTEM]  :: OS SNAPSHOT          :: Initial Process Count: 486
+[2026-01-14 11:31:49.790] [SYSTEM]  :: WINDOW FOCUS         :: 'python' (python.exe : 36388)
+[2026-01-14 11:31:49.792] [SYSTEM]  :: DISK I/O             :: Read: 3033415 MB | Write: 1261450 MB
+[2026-01-14 11:31:50.795] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 36388)
+[2026-01-14 11:31:50.902] [WARNING] :: HIGH MEMORY USAGE    :: 84.9% Used (13.28 GB)
+[2026-01-14 11:31:52.450] [WARNING] :: HIGH MEMORY USAGE    :: 84.9% Used (13.28 GB)
+[2026-01-14 11:31:53.806] [SYSTEM]  :: WINDOW FOCUS         :: 'RAM OPTIMIZATION PROTOCOL' (python.exe : 36388)
+[2026-01-14 11:31:54.018] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 11:31:54.809] [SYSTEM]  :: DISK I/O             :: Read: 3033417 MB | Write: 1261451 MB
+[2026-01-14 11:31:55.567] [WARNING] :: HIGH MEMORY USAGE    :: 84.9% Used (13.27 GB)
+[2026-01-14 11:31:57.118] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.27 GB)
+[2026-01-14 11:31:58.672] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 11:31:59.814] [SYSTEM]  :: DISK I/O             :: Read: 3033418 MB | Write: 1261452 MB
+[2026-01-14 11:32:00.228] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 11:32:01.787] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 11:32:01.817] [APP]     :: PROCESS ENDED        :: PID: 53444
+[2026-01-14 11:32:03.343] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 11:32:04.820] [SYSTEM]  :: DISK I/O             :: Read: 3033419 MB | Write: 1261452 MB
+[2026-01-14 11:32:04.893] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.27 GB)
+[2026-01-14 11:32:05.322] [SYSTEM]  :: WINDOW FOCUS         :: 'EXECUTING PROTOCOL' (python.exe : 36388)
+[2026-01-14 11:32:06.447] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 11:32:07.825] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 36388)
+[2026-01-14 11:32:07.827] [APP]     :: PROCESS ENDED        :: PID: 51752
+[2026-01-14 11:32:08.006] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 11:32:09.564] [WARNING] :: HIGH MEMORY USAGE    :: 84.7% Used (13.25 GB)
+[2026-01-14 11:32:09.829] [SYSTEM]  :: DISK I/O             :: Read: 3033420 MB | Write: 1261453 MB
+[2026-01-14 11:32:11.122] [WARNING] :: HIGH MEMORY USAGE    :: 84.7% Used (13.25 GB)
+[2026-01-14 11:32:12.677] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 11:32:13.834] [APP]     :: PROCESS STARTED      :: powershell.exe (PID: 59216)
+[2026-01-14 11:32:13.834] [APP]     :: PROCESS STARTED      :: conhost.exe (PID: 43300)
+[2026-01-14 11:32:14.229] [WARNING] :: HIGH MEMORY USAGE    :: 85.1% Used (13.30 GB)
+[2026-01-14 11:32:14.336] [SYSTEM]  :: WINDOW FOCUS         :: 'RAM OPTIMIZATION PROTOCOL' (python.exe : 36388)
+[2026-01-14 11:32:14.836] [SYSTEM]  :: DISK I/O             :: Read: 3033431 MB | Write: 1261453 MB
+[2026-01-14 11:32:15.339] [SYSTEM]  :: WINDOW FOCUS         :: 'EXECUTING PROTOCOL' (python.exe : 36388)
+[2026-01-14 11:32:15.788] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 11:32:15.839] [APP]     :: PROCESS ENDED        :: PID: 59216
+[2026-01-14 11:32:15.839] [APP]     :: PROCESS ENDED        :: PID: 43300
+[2026-01-14 11:32:17.338] [WARNING] :: HIGH MEMORY USAGE    :: 84.8% Used (13.26 GB)
+[2026-01-14 11:32:18.386] [SYSTEM]  :: WINDOW FOCUS         :: 'Clip-CACHE' (python.exe : 36388)
+[2026-01-14 11:32:20.393] [SYSTEM]  :: DISK I/O             :: Read: 3033433 MB | Write: 1261454 MB
+[2026-01-14 11:32:25.399] [SYSTEM]  :: DISK I/O             :: Read: 3033433 MB | Write: 1261455 MB
+[2026-01-14 11:32:30.406] [SYSTEM]  :: DISK I/O             :: Read: 3033434 MB | Write: 1261456 MB
+[2026-01-14 11:32:34.411] [APP]     :: PROCESS STARTED      :: nvidia-smi.exe (PID: 10672)
+[2026-01-14 11:32:35.412] [SYSTEM]  :: DISK I/O             :: Read: 3033438 MB | Write: 1261456 MB
+[2026-01-14 11:32:36.413] [APP]     :: PROCESS ENDED        :: PID: 10672
+[2026-01-14 11:32:40.420] [SYSTEM]  :: DISK I/O             :: Read: 3033439 MB | Write: 1261456 MB
+[2026-01-14 11:32:44.427] [APP]     :: PROCESS STARTED      :: powershell.exe (PID: 32920)
+[2026-01-14 11:32:44.427] [APP]     :: PROCESS STARTED      :: conhost.exe (PID: 560)
+[2026-01-14 11:32:45.429] [SYSTEM]  :: DISK I/O             :: Read: 3033441 MB | Write: 1261457 MB

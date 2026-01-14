@@ -1,0 +1,37 @@
+END USER LICENSE AGREEMENT ("AGREEMENT")
+---------------------------------------------------
+APPLICATION: Clip-CACHE (The "Software")
+CREATOR: h4 - {Be Your Best} (The "Author")
+
+IMPORTANT: READ CAREFULLY BEFORE INSTALLING OR USING THE SOFTWARE.
+
+1. NO LIABILITY ("NUCLEAR WAIVER")
+   BY INSTALLING, COPYING, OR USING THIS SOFTWARE, YOU ACKNOWLEDGE AND AGREE THAT:
+   
+   A. THE SOFTWARE IS PROVIDED "AS IS" AND "WITH ALL FAULTS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+   
+   B. THE AUTHOR ("h4") SHALL NOT BE LIABLE FOR ANY DAMAGES WHATSOEVER ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, INCLUDING BUT NOT LIMITED TO DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, LOSS OF DATA, SYSTEM INSTABILITY, HARDWARE FAILURE, LOSS OF BUSINESS PROFITS, OR ANY OTHER FINANCIAL OR PERSONAL LOSS.
+   
+   C. YOU ASSUME ALL RISK ASSOCIATED WITH THE USE OF THE SOFTWARE. IF THE SOFTWARE PROVES DEFECTIVE, YOU (AND NOT THE AUTHOR) ASSUME THE ENTIRE COST OF ALL NECESSARY SERVICING, REPAIR, OR CORRECTION.
+   
+   D. THIS SOFTWARE CONTAINS "POWER USER" FEATURES (SUCH AS MEMORY PURGING AND CLIPBOARD MANIPULATION) THAT INTERACT DIRECTLY WITH SYSTEM RESOURCES. YOU UNDERSTAND THAT MISUSE OF THESE FEATURES COULD POTENTIALLY CAUSE SYSTEM INSTABILITY OR DATA LOSS, AND YOU ACCEPT FULL RESPONSIBILITY FOR SUCH ACTIONS.
+
+2. GRANT OF LICENSE
+   The Author guarantees you a revocable, non-exclusive, non-transferable license to use the Software for personal and commercial purposes, strictly in accordance with the terms of this Agreement.
+
+3. PRIVACY AND DATA OWNERSHIP ("ZERO TELEMETRY PROMISE")
+   The Author respects your privacy implicitly.
+   - The Software DOES NOT collect, transmit, or store any personal data on external servers.
+   - The Software DOES NOT contain telemetry, spyware, or tracking mechanisms.
+   - All clipboard history and pinned items are stored LOCALLY on your machine.
+   - You retain full ownership and control of your data.
+   
+   However, you acknowledge that the Author cannot guarantee the security of your local environment or protect your data from third-party malware, keyloggers, or OS-level telemetry present on your system.
+
+4. TERMINATION
+   This Agreement is effective until terminated. Your rights under this Agreement will terminate automatically without notice if you fail to comply with any of its terms. Upon termination, you must cease all use of the Software and destroy all copies (probably using a standard delete function, but you do you).
+
+5. GOVERNING LAW
+   This Agreement shall be governed by the laws of the Cyberpunk Dystopia we live in, or failing that, Common Sense.
+
+BY CLICKING "I AGREE", YOU CONFIRM THAT YOU HAVE READ THIS AGREEMENT, UNDERSTAND IT, AND AGREE TO BE BOUND BY ITS TERMS. IF YOU DO NOT AGREE, DO NOT INSTALL THE SOFTWARE.

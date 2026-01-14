@@ -1,0 +1,33 @@
+PRIVACY POLICY & TERMS OF SERVICE
+--------------------------------------
+Effective Date: The moment you downloaded this.
+
+1. ZERO TELEMETRY PLEDGE
+   Clip-CACHE ("The App") is built on a foundation of privacy and transparency.
+   - WE DO NOT want your data.
+   - WE DO NOT track your usage.
+   - WE DO NOT send analytics to the cloud.
+   - WE DO NOT inject ads or spyware.
+   
+   The App operates entirely locally. Your Clipboard History (Database) is stored in a local SQLite file (`history.db`) within your user directory. You have full control to purge, wipe, or delete this data at any time via the "ADMIN" or "SETTINGS" tabs.
+
+2. LOCAL DATA SECURITY
+   Because your data is stored locally, it is as secure as your computer.
+   - If your computer is compromised by malware, your clipboard history may be accessible to that malware.
+   - SmartBoard attempts to mask sensitive checks but cannot defend against kernel-level compromise of your OS.
+   - Use "Tabula Rasa" (Nuke All) if you are working with extremely sensitive data and wish to ensure it is wiped from the App's records.
+
+3. USER CONDUCT
+   By using this App, you agree NOT to:
+   - Use the App for illegal activities (obviously).
+   - Attempt to reverse engineer the App's "Nuclear" protections to extract proprietary logic (though it's open source-ish, just don't be a jerk).
+   - Blame the Creator if you lose your clipboard history because you clicked "TABULA RASA" without reading the 20-foot tall warning sign.
+
+4. UPDATES
+   The App may check for updates (if that feature is ever built), but it will do so by querying a version manifest, not by sending your personal info. Currently, it does not even do that. It is a ghost.
+
+5. FINAL WORD
+   This tool is for Power Users. It assumes you know what you are doing. Use it to Be Your Best.
+   
+   Signed,
+   h4
