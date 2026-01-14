@@ -5,6 +5,12 @@
 > **Current Version:** v1.0.0 (Nuclear Capable)  
 > **Status:** Deployment Ready  
 > **Codename:** "Zero Memory"
+ 
+## ⚠️ LICENSE WARNING
+**This is NOT Free Open Source Software.**
+This code is **Source-Available**. You can look, learn, and use it personally.
+If you use this code to make money, you owe the author (h4) **50% of gross revenue**.
+See [LICENSE.md](./LICENSE.md) for details.
 
 ---
 
