@@ -2,10 +2,10 @@
 # █▀▀ █░░ █ █▀█ ░ - █▀▀ ▄▀█ █▀▀ █░█ █▀▀
 # █▄▄ █▄▄ █ █▀▀ ▄ - █▄▄ █▀█ █▄▄ █▀█ ██▄
 
-> **Current Version:** v1.0.0 (Nuclear Capable)  
+> **Current Version:** v2.0.0 (Vault Edition)  
 > **Status:** Deployment Ready  
-> **Codename:** "Zero Memory"
- 
+> **Codename:** "Zero Memory" (With Exceptions)
+
 ## ⚠️ LICENSE WARNING
 **This is NOT Free Open Source Software.**
 This code is **Source-Available**. You can look, learn, and use it personally.
@@ -20,7 +20,11 @@ See [LICENSE.md](./LICENSE.md) for details.
 
 Most clipboard tools are ugly, bloated, or spy on you. We said "fuck that" and built something better.
 
-We built this with a single philosophy: **Zero Memory**. Your computer should work for *you*, not the other way around. When you copy something, it should be there. When you want it gone, it should be **gone**. When you want to see what your system is actually doing, you should have the tools to tear it apart.
+We built this with a single philosophy: **Zero Memory**. Your computer should work for *you*, not the other way around. 
+
+*   When you copy something, it should be there. 
+*   When you want it gone, it should be **gone**. 
+*   When you want it kept forever, it should be **Vaulted**.
 
 Use it to hoard code snippets, track image assets, manage files, or just look cool while doing standard boring office work.
 
@@ -28,41 +32,45 @@ Use it to hoard code snippets, track image assets, manage files, or just look co
 
 ## ⚡ KEY FEATURES
 
+### 🔒 The Vault (Physical Pinning)
+**New in v2.0**: Pinning an item doesn't just "flag" it. It physically copies the data (Text, Image, or **Entire File**) into a secure `%LOCALAPPDATA%` vault.
+*   **Deletion Safe**: If you pin a file and delete the original, the pinned item **still works**. It draws from the Vault.
+*   **Auto-Sync**: Previews, Launches, and Copy operations automatically prioritize the Vault copy.
+*   **Destructive Unpin**: Unpinning is a destructive action. It wipes the Vault copy. We warn you first.
+
 ### 🧠 The Brain (Clipboard Core)
 -   **Universal Capture**: Grabs Text, Images, and File Paths instantly.
 -   **Smart Filtering**: Auto-sorts your chaos into `TEXT`, `IMG`, and `FILES` tabs.
--   **Persistence**: Uses a local SQLite database (stored safely in `%LOCALAPPDATA%`) so your history survives reboots.
+-   **Persistence**: Uses a local SQLite database history survives reboots.
 -   **Infinite Scroll**: A custom-built kinetic scroller that feels like you're swiping through the void.
 
 ### 👻 Stealth & Incognito
--   **True Incognito Mode**: When you toggle this on, the app vanishes. No System Tray icon. No Taskbar entry. It's running, it's watching, but it's invisible until you summon it.
--   **Background Dominance**: Option to start silently with Windows. You won't even know it's there until you need it.
--   **Global Hotkey**: `CTRL + SHIFT + NUMPAD +`. Use it. It brings the app from the shadows to the foreground in ms.
+-   **True Incognito Mode**: Use it to vanish. No System Tray icon. No Taskbar entry.
+-   **Background Dominance**: Start silently with Windows.
+-   **Global Hotkey**: `CTRL + SHIFT + NUMPAD +`. Summon the void instantly.
 
 ### ☢️ NUCLEAR ADMIN TOOLS
-This is where we separate the toys from the tools. Included is a suite of "God Mode" utilities:
--   **RAM Purge**: One click to scream at the OS to release working sets. We have a "Gentle" sweep and an "AGGRESSIVE" protocol that might make Windows cry (but frees up gigs of RAM).
--   **VRAM Reset**: A risky little button that attempts to flush GPU memory. Use with caution.
--   **IP Stack Reset**: Internet acting up? Nuke the DNS resolver and Winsock catalog directly from the UI.
--   **Process Killer**: A built-in Task Manager that doesn't ask for permission.
+-   **RAM Purge**: "Gentle" sweep and "AGGRESSIVE" protocol.
+-   **VRAM Reset**: Flush GPU memory.
+-   **IP Stack Reset**: Nuke the DNS resolver.
+-   **Process Killer**: A built-in Task Manager.
 
 ### 🎨 The Aesthetics
--   **50+ Themes**: From "Cyberpunk Neon" to "Deep Void Slate". We have a theme engine that changes *everything*—window borders, accents, scrollbars, text flow.
--   **Glassmorphism**: Real-time transparency and blur effects (if your GPU can handle it).
--   **Pulse Animation**: The window border breathes. It's alive.
--   **Sound Design**: (Coming soon, maybe. We like silence).
+-   **50+ Themes**: From "Cyberpunk Neon" to "Deep Void Slate".
+-   **Glassmorphism**: Real-time transparency and blur effects.
+-   **Pulse Animation**: The window border breathes.
 
 ---
 
 ## 🛠️ INSTALLATION
 
-You have two choices. The easy way, or the dev way.
-
-### Option A: The Installer (Recommended)
-1.  Download the latest `Clip-CACHE_Setup_v1.0.exe`.
-2.  Run it.
-3.  It puts the binary in `%APPDATA%`, sets up your shortcuts, and adds the registry keys for startup.
-4.  **Updates**: If you instal it again later, it detects the old version and asks if you want to `REPAIR/UPDATE` or `UNINSTALL`. Smart.
+### Option A: The Installer (Smart v2.0)
+1.  **Compile It**: Run `iscc setup_script.iss` (Requires Inno Setup).
+2.  **Run It**: `Clip-CACHE_Setup_v2.0.exe`.
+3.  **Smart Logic**:
+    *   **Auto-Detect**: Finds existing installs.
+    *   **Options**: Offers to `REMOVE` (Uninstall) or `MODIFY/REPAIR` (Update) automatically.
+    *   **Single Instance**: Prevents multiple installers or apps from running at once.
 
 ### Option B: The Source (Python)
 If you trust no one and want to run raw code:
@@ -70,61 +78,56 @@ If you trust no one and want to run raw code:
 git clone https://github.com/h4-tools/Clip-CACHE.git
 cd Clip-CACHE
 pip install -r requirements.txt
-python src/main.py
+python ClipCache_Launcher.py
 ```
-*Note: You'll need Python 3.10+ and a decent appreciation for `PyQt6`.*
 
 ---
 
 ## 🎮 HOW TO USE
 
 1.  **Launch It**: Double click the `(b'.')b` icon.
-2.  **Copy Stuff**: Just use Windows normally (`Ctrl+C`). We catch it all.
-3.  **Summon**: Hit `CTRL+SHIFT+NUMPAD +` or double-click the tray icon.
-4.  **Pin It**: Found a snippet you use every day? Click **PIN ITEM**. It moves to the `PINNED` tab and stays there forever, effectively shielding it from the "Clear All" nuke.
-5.  **Nuke It**: Click `DELETE` to remove one item, or use the **Admin Panel** to `TABULA RASA` (Wipe everything).
+2.  **Summon**: Hit `CTRL+SHIFT+NUMPAD +` or double-click the tray icon.
+3.  **Pin (Vault)**: Click **PIN ITEM**. This creates a physical copy in the Vault.
+    *   *Pro Tip*: You can now safely delete the original source file. The Vault has you covered.
+4.  **Unpin**: Click **UNPIN ITEM**. Warning: This destroys the Vault copy.
 
 ### The "God Mode" Toggle
-Go to **Settings (☰)** -> **System Tab**.
-Toggle **DEBUG / GOD MODE**.
-Congratulations, you now have an extra `ADMIN` tab in the main window. Start breaking things.
+Go to **Settings (☰)** -> **System Tab** -> Toggle **DEBUG / GOD MODE**.
 
 ---
 
 ## 📁 TECHNICAL SPECS
 
+-   **Version**: 2.0.0
 -   **Language**: Python 3.11
 -   **GUI Framework**: PyQt6 (Heavily modified with QSS)
 -   **Database**: SQLite3
--   **Monitoring**: `psutil` & `win32api`
--   **Build System**: PyInstaller + Inno Setup 6
+-   **Storage**: `%LOCALAPPDATA%\h4\Clip-CACHE\vault\`
 
 ### File Structure
-We keep it clean. No spaghetti code here (mostly).
 ```
 /src
-  /core       # The Brain (DB, Monitor, Logger)
-  /ui         # The Face (Windows, Widgets, Styles)
-  /assets     # The Soul (Icons, EULA, Privacy)
-  main.py     # The Heartbeat
+  /core       # The Brain (Vault, DB, Monitor)
+  /ui         # The Face (Windows, Widgets)
+  /assets     # The Soul (Icons, EULA)
+  ClipCache_Launcher.py # The Key
 ```
 
 ---
 
-## 🕊️ PHILOSOPHY: "Zero Memory"
+## 🕊️ PHILOSOPHY: "Zero Memory" (Revised)
 
 We believe software should be ephemeral unless told otherwise. 
-Clip-CACHE uses a **FIFO** (First-In-First-Out) buffer for general history. Once you hit 100 items, the oldest one gets pushed into the void. This keeps your database small and the app fast.
-
-We don't cloud sync. We don't phone home. Your clipboard is *your* business. The only logs we keep are crash reports on your Desktop because we're not psychics and sometimes bugs happen when you laucnh weird shit.
+Clip-CACHE uses a **FIFO** buffer. Old shit dies.
+**EXCEPTION**: The Vault. What you Pin, you Keep. Physically. Forever (until you unpin).
 
 ---
 
 ## ⚖️ LEGAL & DISCLAIMER
 
-**This tool is powerful.** Using the "Aggressive RAM Clean" or "VRAM Reset" carries non-zero risks of crashing other apps. We aren't responsible if you lose your unsaved Word doc because you decided to nuke system memory while typing a thesis.
-
-**Privacy**: We capture your clipboard. It's stored LOCALLY on your drive. If you copy a password, it's in the DB. If you're paranoid, hit the **"PURGE MEMORY"** button before you close the app.
+**This tool is powerful.** Using "Aggressive RAM Clean" carries risks.
+**Privacy**: We capture your clipboard. It's stored LOCALLY. We don't see it.
+**Single Instance**: The app enforces a Highlander rule ("There can be only one").
 
 ---
 
