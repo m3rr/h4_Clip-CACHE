@@ -3,7 +3,7 @@
 AppId={{Clip-CACHE_H4}}
 AppName=Clip-CACHE
 AppVersion=2.0.0
-AppPublisher=(b'.')b - h4 - {{Be Your Best}}}
+AppPublisher=(b'.')b - h4 - {{Be Your Best}}
 AppPublisherURL=https://github.com/m3rr
 AppSupportURL=https://github.com/m3rr
 AppUpdatesURL=https://github.com/m3rr

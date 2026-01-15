@@ -643,6 +643,17 @@ class MainWindow(QMainWindow):
             self.lbl_preview_img.setWordWrap(True)
             self.lbl_preview_img.setTextFormat(Qt.TextFormat.PlainText)
             txt = data['content']
+            
+            # --- VAULT TEXT HANDLING ---
+            # If type is text but content is a file path (Vaulted), read it!
+            if is_vaulted and os.path.exists(txt) and os.path.isfile(txt):
+                try:
+                    with open(txt, 'r', encoding='utf-8', errors='ignore') as f:
+                        txt = f.read()
+                except Exception as e:
+                    txt = f"[ERROR READING VAULT TEXT]: {e}"
+            # ---------------------------
+
             if len(txt) > 500: txt = txt[:500] + "\n...[TRUNCATED]"
             self.lbl_preview_img.setText(txt)
                 
@@ -675,7 +686,18 @@ class MainWindow(QMainWindow):
             data = self.current_data
             
             if data['type'] == 'text':
-                cb.setText(data['content'])
+                content = data['content']
+                # Check for Vaulted Text File
+                if os.path.exists(content) and os.path.isfile(content):
+                     # It's likely a Vault Path
+                     try:
+                         with open(content, 'r', encoding='utf-8', errors='ignore') as f:
+                             content = f.read()
+                     except Exception as e:
+                         print(f"Error reading vaulted text for clipboard: {e}")
+                         # Fallback to copy path if read fails? No, better to fail text copy or copy error.
+                         
+                cb.setText(content)
             
             elif data['type'] == 'image':
                 img = QImage(data['content'])
