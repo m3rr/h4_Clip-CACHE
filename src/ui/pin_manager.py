@@ -155,10 +155,30 @@ class PinManagerWindow(QWidget):
         
         w = self.list_widget.itemWidget(item)
         if w and hasattr(w, 'data'):
-            # Unpin
-            self.db.toggle_pin(w.data['id'])
-            # Refresh list
-            self.refresh_pins()
+            # Warn User
+            msg = QMessageBox(self)
+            msg.setWindowTitle("DESTROY MEMORY?")
+            msg.setText("Unpinning this item will PERMANENTLY DELETE the Vault copy.\n\nAre you sure?")
+            msg.setIcon(QMessageBox.Icon.Warning)
+            msg.setStandardButtons(QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
+            
+            if msg.exec() == QMessageBox.StandardButton.Yes:
+                from ..core.vault import VaultManager
+                vault = VaultManager()
+                
+                # Check Metadata for vault path
+                meta = w.data.get('metadata', {})
+                vault_path = meta.get('vault_path')
+                
+                if vault_path:
+                    vault.delete_item(vault_path)
+                    meta['vault_path'] = None
+                    self.db.update_item_metadata(w.data['id'], meta)
+            
+                # Unpin
+                self.db.toggle_pin(w.data['id'])
+                # Refresh list
+                self.refresh_pins()
             
     def goto_selected(self):
         item = self.list_widget.currentItem()

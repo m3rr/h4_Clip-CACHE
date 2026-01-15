@@ -2,13 +2,15 @@
 [Setup]
 AppId={{Clip-CACHE_H4}}
 AppName=Clip-CACHE
-AppVersion=1.0.0
-AppPublisher=(b'.')b - h4 - {{Be Your Best}}
+AppVersion=2.0.0
+AppPublisher=(b'.')b - h4 - {{Be Your Best}}}
 AppPublisherURL=https://github.com/m3rr
 AppSupportURL=https://github.com/m3rr
 AppUpdatesURL=https://github.com/m3rr
 DefaultDirName={autopf}\Clip-CACHE
 DisableProgramGroupPage=yes
+DisableDirPage=no
+UsePreviousAppDir=no
 LicenseFile=D:\PROJECTS\TOOLS\SmartBoard\assets\legal\EULA.txt
 InfoBeforeFile=D:\PROJECTS\TOOLS\SmartBoard\assets\legal\PRIVACY.txt
 ; "Deep Void" / Slate Theme Integration
@@ -16,7 +18,7 @@ WizardStyle=modern
 ; WizardImageFile=compiler:WizModernImage-IS.bmp
 ; WizardSmallImageFile=compiler:WizModernSmallImage-IS.bmp
 OutputDir=D:\PROJECTS\TOOLS\SmartBoard\output
-OutputBaseFilename=Clip-CACHE_Setup_v1.0
+OutputBaseFilename=Clip-CACHE_Setup_v2.0
 SetupIconFile=D:\PROJECTS\TOOLS\SmartBoard\assets\image_assets\icon.ico
 Compression=lzma2
 SolidCompression=yes
@@ -81,9 +83,10 @@ begin
     StringChange(sUnInstallString, '"', '');
     
     // App is installed. Ask user.
-    V := MsgBox('Clp-CACHE is already installed.' + #13#10 + #13#10 +
-                'Click "Yes" to UNINSTALL standard version.' + #13#10 +
-                'Click "No" to UPDATE / REPAIR existing installation.', mbInformation, MB_YESNOCANCEL);
+    V := MsgBox('Clip-CACHE is already installed.' + #13#10 + #13#10 +
+                'Click "Yes" to REMOVE (Uninstall).' + #13#10 +
+                'Click "No" to MODIFY (Change Location) or REPAIR (Reinstall).' + #13#10 +
+                'Click "Cancel" to DO NOTHING (Exit Setup).', mbInformation, MB_YESNOCANCEL);
                 
     if V = IDYES then begin
       // Run Uninstaller

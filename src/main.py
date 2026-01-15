@@ -57,7 +57,7 @@ if os.name == 'nt':
 
     subprocess.Popen = SafePopen
 # ----------------------------
-from PyQt6.QtWidgets import QApplication
+from PyQt6.QtWidgets import QApplication, QMessageBox
 from PyQt6.QtCore import QFile, QTextStream
 
 # Add src to path if needed
@@ -67,6 +67,7 @@ from src.core.database import DatabaseManager
 from src.core.clipboard_manager import ClipboardManager
 from src.core.monitor import SystemMonitor
 from src.core.watchdog import MemoryWatchdog
+from src.core.vault import VaultManager # Explicit import for PyInstaller
 from src.ui.main_window import MainWindow
 from src.ui.tray import SystemTray
 from src.ui.theme_manager import ThemeManager
@@ -95,6 +96,7 @@ class ClipCacheApp(QObject):
         print("[INIT] Creating QApplication...")
         self.app = QApplication(sys.argv)
         self.app.setQuitOnLastWindowClosed(False)
+        self.check_single_instance()
         
         # Connect signal
         self.last_hotkey_time = 0
@@ -319,6 +321,65 @@ class ClipCacheApp(QObject):
     def quit_and_purge(self):
         self.db.clear_history()
         self.quit_app()
+
+    def check_single_instance(self):
+        import psutil
+        import os
+        
+        current_pid = os.getpid()
+        found_proc = None
+        
+        for proc in psutil.process_iter(['pid', 'name', 'exe']):
+            try:
+                if proc.info['pid'] == current_pid:
+                    continue
+                
+                # Check for Clip-CACHE executable match
+                proc_exe = proc.info.get('exe')
+                
+                # Strict Match (Same Executable Path)
+                if proc_exe and sys.executable and os.path.normpath(proc_exe) == os.path.normpath(sys.executable):
+                    found_proc = proc
+                    break
+                    
+                # Name Match (If running from different path but same app name)
+                # Only if frozen (compiled exe)
+                if getattr(sys, 'frozen', False):
+                     if proc.info['name'] and "Clip-CACHE" in proc.info['name']:
+                         found_proc = proc
+                         break
+            except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+                continue
+                
+        if found_proc:
+            print(f"[INIT] SingleInstance: Found duplicate PID {found_proc.pid}")
+            
+            msg = QMessageBox()
+            msg.setWindowTitle("Duplicate Instance Detected")
+            msg.setText(f"Another instance of Clip-CACHE is already running (PID {found_proc.pid}).\n\nWhat would you like to do?")
+            msg.setIcon(QMessageBox.Icon.Warning)
+            
+            btn_stop = msg.addButton("Stop Opening", QMessageBox.ButtonRole.RejectRole)
+            btn_close_run = msg.addButton("Close Running", QMessageBox.ButtonRole.DestructiveRole)
+            btn_nothing = msg.addButton("Do Nothing", QMessageBox.ButtonRole.ActionRole)
+            
+            msg.exec()
+            
+            if msg.clickedButton() == btn_stop:
+                print("[INIT] User selected STOP. Exiting.")
+                sys.exit(0)
+            elif msg.clickedButton() == btn_nothing:
+                print("[INIT] User selected DO NOTHING. Exiting.")
+                sys.exit(0)
+            elif msg.clickedButton() == btn_close_run:
+                print(f"[INIT] User selected CLOSE RUNNING. Terminating PID {found_proc.pid}...")
+                try:
+                    found_proc.terminate()
+                    found_proc.wait(timeout=3)
+                except Exception as e:
+                    print(f"Failed to terminate: {e}")
+                    QMessageBox.critical(None, "Error", f"Failed to close running instance:\n{e}")
+                    sys.exit(1)
 
     def run(self):
         sys.exit(self.app.exec())

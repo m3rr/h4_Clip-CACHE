@@ -15,7 +15,7 @@ import sys
 import json
 from PyQt6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
                              QListWidget, QListWidgetItem, QLabel, QSplitter, 
-                             QScrollArea, QSizeGrip, QTabWidget, QPushButton, QFrame)
+                             QScrollArea, QSizeGrip, QTabWidget, QPushButton, QFrame, QMessageBox)
 from PyQt6.QtCore import Qt, QSize, pyqtSignal, QSettings, QPoint
 from PyQt6.QtGui import QIcon, QPixmap, QColor
 from .widgets.neon_button import NeonButton
@@ -235,7 +235,7 @@ class MainWindow(QMainWindow):
         
         # Pane 1: Tabbed History
         self.tabs = QTabWidget()
-        self.tabs.setFixedWidth(350)
+        self.tabs.setFixedWidth(400)
         self.tabs.currentChanged.connect(self.refresh_history)
         
         # Create Lists for Tabs
@@ -521,10 +521,28 @@ class MainWindow(QMainWindow):
             self.update_details(widget.data)
 
     def update_details(self, data):
-        meta = data.get('metadata', {})
-        meta_str = f"ID: {data['id']}\nTime: {data['timestamp']}\nType: {data['type']}\nPinned: {bool(data['pinned'])}"
+        # COPY data prevents mutating the original ListWidget item permanently if we didn't want to
+        # But here we want self.current_data to represent the "Effective" item.
+        # So we will copy it to safe_data.
+        safe_data = data.copy()
         
-        if meta and isinstance(meta, dict):
+        meta = safe_data.get('metadata', {})
+        if not isinstance(meta, dict): meta = {}
+        
+        vault_path = meta.get('vault_path')
+        is_vaulted = False
+        
+        if vault_path and os.path.exists(vault_path):
+            # OVERRIDE CONTENT WITH VAULT PATH
+            safe_data['content'] = vault_path
+            is_vaulted = True
+        
+        meta_str = f"ID: {safe_data['id']}\nTime: {safe_data['timestamp']}\nType: {safe_data['type']}\nPinned: {bool(safe_data['pinned'])}"
+        
+        if is_vaulted:
+            meta_str += "\n🔒 [SECURED IN VAULT]"
+        
+        if meta:
             # Format metadata nicely
             meta_str += "\n\nMETADATA:\n"
             for k, v in meta.items():
@@ -533,7 +551,12 @@ class MainWindow(QMainWindow):
             meta_str += "\n\nMETADATA: None"
             
         self.lbl_details.setText(meta_str)
-        self.btn_pin.setText("UNPIN ITEM" if data['pinned'] else "PIN ITEM")
+        self.btn_pin.setText("UNPIN ITEM" if safe_data['pinned'] else "PIN ITEM")
+        
+        # Use safe_data for everything below
+        data = safe_data
+        
+        # ... (rest of function uses 'data')
         
         # Clear Previous
         self.lbl_preview_img.setPixmap(QPixmap())
@@ -673,9 +696,93 @@ class MainWindow(QMainWindow):
             LOGGER.log(f"CLIPBOARD: Set Active Item {data['id']}")
 
     def toggle_pin(self):
-        if hasattr(self, 'current_data'):
-             self.db.toggle_pin(self.current_data['id'])
-             self.refresh_history()
+        try:
+            if not hasattr(self, 'current_data'):
+                return
+
+            item = self.current_data
+            item_id = item['id']
+            is_pinned = item['pinned']
+            
+            # Initialize Vault
+            from ..core.vault import VaultManager
+            vault = VaultManager()
+            
+            # --- UNPINNING LOGIC (DESTRUCTION) ---
+            if is_pinned:
+                # 1. Warn User (Destructive Action)
+                msg = QMessageBox(self)
+                msg.setWindowTitle("DESTROY MEMORY?")
+                msg.setText("Unpinning this item will PERMANENTLY DELETE the Vault copy.\n\nAre you sure?")
+                msg.setIcon(QMessageBox.Icon.Warning)
+                msg.setStandardButtons(QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
+                
+                if msg.exec() == QMessageBox.StandardButton.Yes:
+                     # Check Metadata for vault path
+                     meta = item.get('metadata', {})
+                     if not isinstance(meta, dict): meta = {} # Force Dict
+                     
+                     vault_path = meta.get('vault_path')
+                     
+                     if vault_path:
+                         try:
+                             vault.delete_item(vault_path)
+                         except Exception as e:
+                             print(f"Vault Delete Error: {e}")
+                             
+                         meta['vault_path'] = None # Clear it
+                         self.db.update_item_metadata(item_id, meta)
+                         
+                     self.db.toggle_pin(item_id)
+                     
+                     # UPDATE LOCAL STATE TO PREVENT STALE LOGIC
+                     self.current_data['pinned'] = 0
+                     self.update_details(self.current_data)
+                     
+                     self.refresh_history()
+
+            # --- PINNING LOGIC (CREATION) ---
+            else:
+                # 1. Size Check (If File)
+                if item['type'] == 'file':
+                    try:
+                        f_size = vault.get_file_size_mb(item['content'])
+                        if f_size > 500:
+                            msg = QMessageBox(self)
+                            msg.setWindowTitle("MASSIVE OBJECT DETECTED")
+                            msg.setText(f"This file is {f_size:.2f} MB.\n\nCopying it to the Vault might take space.\nProceed?")
+                            msg.setIcon(QMessageBox.Icon.Question)
+                            msg.setStandardButtons(QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
+                            if msg.exec() != QMessageBox.StandardButton.Yes:
+                                return
+                    except:
+                        pass # Ignore size check error
+
+                # 2. Store in Vault
+                new_path = vault.store_item(item['type'], item['content'])
+                
+                if new_path:
+                    # 3. Update DB
+                    meta = item.get('metadata', {})
+                    if not isinstance(meta, dict): meta = {} # Safety
+                    meta['vault_path'] = new_path
+                    self.db.update_item_metadata(item_id, meta)
+                    
+                    self.db.toggle_pin(item_id)
+                    
+                    # UPDATE LOCAL STATE
+                    self.current_data['pinned'] = 1
+                    self.update_details(self.current_data)
+                    
+                    self.refresh_history()
+                else:
+                    QMessageBox.warning(self, "Vault Error", "Failed to store item in Vault.")
+                    
+        except Exception as e:
+            import traceback
+            err = traceback.format_exc()
+            print(f"[ERROR] Toggle Pin Failed: {e}\n{err}")
+            QMessageBox.critical(self, "Critical Error", f"Failed to toggle pin:\n{e}")
 
     def delete_item(self):
         if hasattr(self, 'current_data'):

@@ -52,6 +52,7 @@ def run_pyinstaller():
         "--onedir",
         f"--name={APP_NAME}",
         f"--icon={ICON_PATH}",
+        "--hidden-import=src.core.vault", # Force include VaultManager
         f"--add-data=assets;assets", # Include assets folder
         f"--add-data=src;src",       # Include src folder (Python need code structure sometimes if not fully compiled)
         # Actually for --onedir we just need entry point imports. 
@@ -86,13 +87,15 @@ def create_inno_script():
 [Setup]
 AppId={{{APP_NAME}_H4}}
 AppName={APP_NAME}
-AppVersion=1.0.0
+AppVersion=2.0.0
 AppPublisher={publisher}
 AppPublisherURL={url}
 AppSupportURL={url}
 AppUpdatesURL={url}
 DefaultDirName={{autopf}}\\{APP_NAME}
 DisableProgramGroupPage=yes
+DisableDirPage=no
+UsePreviousAppDir=no
 LicenseFile={license_path}
 InfoBeforeFile={privacy_path}
 ; "Deep Void" / Slate Theme Integration
@@ -100,7 +103,7 @@ WizardStyle=modern
 ; WizardImageFile=compiler:WizModernImage-IS.bmp
 ; WizardSmallImageFile=compiler:WizModernSmallImage-IS.bmp
 OutputDir={output_path}
-OutputBaseFilename={APP_NAME}_Setup_v1.0
+OutputBaseFilename={APP_NAME}_Setup_v2.0
 SetupIconFile={icon_abs_path}
 Compression=lzma2
 SolidCompression=yes
@@ -165,9 +168,10 @@ begin
     StringChange(sUnInstallString, '"', '');
     
     // App is installed. Ask user.
-    V := MsgBox('Clp-CACHE is already installed.' + #13#10 + #13#10 +
-                'Click "Yes" to UNINSTALL standard version.' + #13#10 +
-                'Click "No" to UPDATE / REPAIR existing installation.', mbInformation, MB_YESNOCANCEL);
+    V := MsgBox('{APP_NAME} is already installed.' + #13#10 + #13#10 +
+                'Click "Yes" to REMOVE (Uninstall).' + #13#10 +
+                'Click "No" to MODIFY (Change Location) or REPAIR (Reinstall).' + #13#10 +
+                'Click "Cancel" to DO NOTHING (Exit Setup).', mbInformation, MB_YESNOCANCEL);
                 
     if V = IDYES then begin
       // Run Uninstaller
