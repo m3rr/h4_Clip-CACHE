@@ -116,7 +116,7 @@ class GodModeLogger:
 
     def _os_monitor_loop(self):
         """
-        Background loop for heavy OS monitoring (Processes, Windows, IO).
+        Background loop for OS monitoring.
         """
         self.known_pids = set(psutil.pids())
         self.log_system("OS SNAPSHOT", f"Initial Process Count: {len(self.known_pids)}")
@@ -125,14 +125,11 @@ class GodModeLogger:
         
         while not self.stop_event.is_set():
             try:
-                # 1. Window Focus Monitor (Fast Poll: 0.5s)
                 self._check_window_focus()
                 
-                # 2. Process Monitor (Slow Poll: 2.0s)
                 if frame_count % 4 == 0:
                     self._check_processes()
                 
-                # 3. Telemetry (Very Slow Poll: 5.0s)
                 if frame_count % 10 == 0:
                     self._check_telemetry()
                 

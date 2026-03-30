@@ -129,19 +129,17 @@ class DatabaseManager:
         rows = cursor.fetchall()
         conn.close()
         
-        # Format rows: (id, type, content, timestamp, pinned, metadata)
+        # Format rows
         formatted_rows = []
-        import json
         for row in rows:
             r = list(row)
-            # Row index 5 is metadata (0=id, 1=type, 2=content, 3=ts, 4=pinned, 5=meta)
             if len(r) > 5 and r[5]:
                 try:
                     r[5] = json.loads(r[5])
                 except:
                     r[5] = {}
             else:
-                if len(r) > 5: r[5] = {} # Ensure it's a dict
+                if len(r) > 5: r[5] = {} 
                 
             formatted_rows.append(tuple(r))
             
@@ -172,7 +170,6 @@ class DatabaseManager:
 
     def update_item_metadata(self, item_id, new_meta):
         """Update metadata for an item (e.g. rename)."""
-        import json
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         

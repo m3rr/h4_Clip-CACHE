@@ -98,41 +98,28 @@ class ClipCacheApp(QObject):
         self.app.setQuitOnLastWindowClosed(False)
         self.check_single_instance()
         
-        # Connect signal
         self.last_hotkey_time = 0
-        
-        # Connect signal
         self.hotkey_signal.connect(self.toggle_window)
         
-        # --- RESOURCE HELPER ---
         def resolve_resource_path(relative_path):
-            """
-            Robust path resolver for Dev and PyInstaller (OneDir/OneFile).
-            """
             if hasattr(sys, '_MEIPASS'):
-                # PyInstaller OneFile
                 return os.path.join(sys._MEIPASS, relative_path)
             
-            # PyInstaller OneDir or Dev
-            # Try 1: Relative to current main file (Dev)
             base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
             candidate = os.path.join(base_path, relative_path)
             if os.path.exists(candidate):
                 return candidate
                 
-            # Try 2: Relative to Executable (OneDir)
             if getattr(sys, 'frozen', False):
                 base_path = os.path.dirname(sys.executable)
                 candidate = os.path.join(base_path, relative_path)
                 if os.path.exists(candidate):
                     return candidate
             
-            # Fallback: Current Working Directory
             return os.path.abspath(relative_path)
             
         self.resolve_resource_path = resolve_resource_path
 
-        # Set Application Icon (for Taskbar)
         from PyQt6.QtGui import QIcon
         icon_path = self.resolve_resource_path(os.path.join("assets", "image_assets", "icon.ico"))
         if os.path.exists(icon_path):
@@ -140,17 +127,14 @@ class ClipCacheApp(QObject):
         else:
             print(f"[ERROR] Icon not found at: {icon_path}")
         
-        # Config
         self.config = ConfigManager()
         
         print("[INIT] Loading Styles...")
-        # Load saved theme or default
         saved_theme = self.config.get_theme()
         self.load_stylesheet(saved_theme)
         
         print("[INIT] Applying Theme: " + saved_theme)
         
-        # Core
         print("[INIT] Initializing DB...")
         self.db = DatabaseManager() 
         print("[INIT] Initializing Clipboard...")
@@ -161,31 +145,23 @@ class ClipCacheApp(QObject):
         self.watchdog = MemoryWatchdog()
         self.watchdog.start()
         
-        # UI
         print("[INIT] Initializing Themes...")
         self.themes = ThemeManager()
         print("[INIT] Initializing Main Window...")
         self.window = MainWindow(self.db, self.clipboard)
-        # Connect minimized signal after window creation (Wait, window is created here)
-        # But I need to do it AFTER window creation.
         
         print("[INIT] Initializing Tray...")
         self.tray = SystemTray(self.monitor, self)
         
-        # Connect signal NOW (after window init)
         self.window.minimized.connect(self.on_window_minimized)
         
-        # Hotkey Listener - CTRL+SHIFT+NUMPAD_PLUS
-        # Using manual Listener to reliably detect NUMPAD+ (VK 107)
         print("[INIT] Starting Hotkey Listener...")
         from pynput.keyboard import Key, Listener, KeyCode
         
-        # Track modifier state
         self.ctrl_pressed = False
         self.shift_pressed = False
         
         def on_press(key):
-            # Track modifiers
             if key == Key.ctrl_l or key == Key.ctrl_r:
                 self.ctrl_pressed = True
             elif key == Key.shift_l or key == Key.shift_r:
@@ -204,17 +180,10 @@ class ClipCacheApp(QObject):
         self.listener = Listener(on_press=on_press, on_release=on_release)
         self.listener.start()
         
-        # Show Window logic:
-        # 1. If override is True -> Start Minimized
-        # 2. If Config says Start Background -> Start Minimized
-        # 3. Else -> Show Window
-        
         should_start_bg = start_in_background_override or self.config.get_start_in_background()
         
         if should_start_bg:
             print("[INIT] Starting in Background (minimized to tray)")
-            # Window is hidden by default init, so just don't show it
-            # Explicitly check Incognito Mode here too
             if self.config.get_incognito_mode():
                 self.tray.hide()
             else:
@@ -226,12 +195,9 @@ class ClipCacheApp(QObject):
         print("[INIT] Ready to Run.")
 
     def on_window_minimized(self):
-        """Handle minimization logic (Incognito Mode)."""
         is_incognito = self.config.get_incognito_mode()
         print(f"[MAIN] Window Minimized. Incognito Mode: {is_incognito}")
         
-        # Hide window from taskbar (standard behavior for tray apps usually involves hide())
-        # But changeEvent detected Minimize. If we act here, we can hide() to remove from taskbar.
         self.window.hide()
         
         if is_incognito:
@@ -242,7 +208,6 @@ class ClipCacheApp(QObject):
             print("[MAIN] Tray Visible.")
 
     def load_stylesheet(self, theme_name="Cyberpunk Neon"):
-        # Use ThemeManager to generate QSS
         print(f"[INIT] Applying Theme: {theme_name}")
         stylesheet = ThemeManager.get_stylesheet(theme_name)
         self.app.setStyleSheet(stylesheet)
@@ -250,13 +215,11 @@ class ClipCacheApp(QObject):
     def on_hotkey(self):
         import time
         current_time = time.time()
-        # 500ms Debounce
         if current_time - self.last_hotkey_time < 0.5:
              print("[HOTKEY] Ignored (Debounce)")
              return
         self.last_hotkey_time = current_time
         
-        # Emit signal to run on main thread
         self.hotkey_signal.emit()
 
     def toggle_window(self):
@@ -264,9 +227,6 @@ class ClipCacheApp(QObject):
         
         if self.window.isVisible() and not self.window.isMinimized():
             self.window.hide()
-            # Check Incognito Mode - if enabled, hide tray too?
-            # User said "When minimized no icon".
-            # Hiding the window effectively minimizes it to "tray" (or nothing).
             if self.config.get_incognito_mode():
                 self.tray.hide()
                 print("[HOTKEY] Window Hidden + Tray Hidden (Incognito)")
@@ -274,22 +234,16 @@ class ClipCacheApp(QObject):
                 self.tray.show()
                 print("[HOTKEY] Window Hidden + Tray Visible")
         else:
-            # Show the window first
             self.window.show()
             self.window.showNormal()
-            self.tray.show() # Always ensure tray comes back when window is visible? 
-            # Or should tray stay hidden if Incognito? 
-            # Usually Tray Icon accompanies the app. I'll make it visible.
+            self.tray.show()
             
-            # Use pywin32 to FORCE window to foreground (Windows blocks focus stealing)
             try:
                 import win32gui
                 import win32con
                 
-                # Get the window handle
                 hwnd = int(self.window.winId())
                 
-                # Force foreground using AllowSetForegroundWindow trick
                 win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
                 win32gui.SetForegroundWindow(hwnd)
                 win32gui.BringWindowToTop(hwnd)
@@ -297,7 +251,6 @@ class ClipCacheApp(QObject):
                 print(f"[HOTKEY] Window forced to foreground via win32 (hwnd: {hwnd})")
             except Exception as e:
                 print(f"[HOTKEY] Win32 foreground failed: {e}")
-                # Fallback to Qt methods
                 self.window.activateWindow()
                 self.window.raise_()
             
@@ -334,16 +287,12 @@ class ClipCacheApp(QObject):
                 if proc.info['pid'] == current_pid:
                     continue
                 
-                # Check for Clip-CACHE executable match
                 proc_exe = proc.info.get('exe')
                 
-                # Strict Match (Same Executable Path)
                 if proc_exe and sys.executable and os.path.normpath(proc_exe) == os.path.normpath(sys.executable):
                     found_proc = proc
                     break
                     
-                # Name Match (If running from different path but same app name)
-                # Only if frozen (compiled exe)
                 if getattr(sys, 'frozen', False):
                      if proc.info['name'] and "Clip-CACHE" in proc.info['name']:
                          found_proc = proc
@@ -387,11 +336,8 @@ class ClipCacheApp(QObject):
 def main(start_in_background=False):
     app = ClipCacheApp(start_in_background_override=start_in_background)
     
-    # Command line arg overrides config
     if start_in_background:
         print("[INIT] Forced Background Start via Argument")
-        # The app constructor already handles initial visibility based on this override
-        # app.window.hide() # No longer needed here
     
     app.run()
 
@@ -402,8 +348,7 @@ if __name__ == "__main__":
         import traceback
         import datetime
         
-        # Emergency Crash Log to Desktop for visibility
-        desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop') 
+        desktop = os.path.join(os.environ['USERPROFILE'], 'Desktop') 
         crash_file = os.path.join(desktop, "ClipCACHE_CRASH_LOG.txt")
         
         with open(crash_file, "w") as f:

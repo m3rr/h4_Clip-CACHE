@@ -74,17 +74,12 @@ class MemoryWatchdog(QObject):
 
     def _restart_application(self):
         """
-        Restarts the current program.
-        Note: This kills the process and starts a new one.
+        Restarts the current application instance.
         """
         try:
             print("[WATCHDOG] Initiating Nuclear Restart...")
-            # We use subprocess to launch a new instance, then kill self?
-            # Or execv to replace functionality (linux/unix mainly, windows execv can act weird but generally works for python)
-            # Safer cross-platform way for GUI apps:
-            
             python = sys.executable
             os.execl(python, python, *sys.argv)
         except Exception as e:
             print(f"[WATCHDOG] Restart Failed: {e}")
-            sys.exit(1) # Force kill if restart fails
+            sys.exit(1)

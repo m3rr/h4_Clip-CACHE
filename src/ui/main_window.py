@@ -474,29 +474,22 @@ class MainWindow(QMainWindow):
             
     def set_debug_mode(self, enabled):
         LOGGER.log(f"UI: Debug Mode Toggled to {enabled}")
-        # Toggle Admin Tab visibility (Index 5 now)
         self.tabs.setTabVisible(5, enabled)
         
     def _update_admin_visibility(self):
         self.tabs.setTabVisible(5, False)
 
-    # --- Power Tool Handlers ---
     def handle_purge(self):
-        # Purge all EXCEPT pinned
         self.db.clear_history(keep_pinned=True)
         self.refresh_history()
-        # Notify
         LOGGER.log(f"MEMORY: History Purged (Pins Preserved).")
         
     def switch_to_pins(self):
-        # Index 0 is 'PINNED'
-        # If visible...
         if self.tabs.isTabVisible(0):
             self.tabs.setCurrentIndex(0)
         else:
-            # If not visible (count=0), maybe warn? or just go to ALL
             LOGGER.log("UI: Requested Pinned Tab but it is hidden (0 pins).")
-            self.tabs.setCurrentIndex(1) # ALL
+            self.tabs.setCurrentIndex(1)
             
         self.show()
         self.activateWindow()
@@ -504,7 +497,6 @@ class MainWindow(QMainWindow):
     def on_item_clicked(self, list_item):
         target_list = list_item.listWidget()
         
-        # Deselect/Reset all visual states in this list
         for i in range(target_list.count()):
             it = target_list.item(i)
             w = target_list.itemWidget(it)
@@ -555,8 +547,6 @@ class MainWindow(QMainWindow):
         
         # Use safe_data for everything below
         data = safe_data
-        
-        # ... (rest of function uses 'data')
         
         # Clear Previous
         self.lbl_preview_img.setPixmap(QPixmap())

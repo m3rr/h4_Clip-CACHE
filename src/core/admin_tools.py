@@ -67,9 +67,6 @@ class AdminTools:
         except Exception as e:
             LOGGER.error(f"Working Set Error: {e}")
 
-        # 3. System Standby List (Advanced) - Placeholder
-        pass
-
     @staticmethod
     def clean_system_memory(aggressive=False):
         """
@@ -126,13 +123,56 @@ class AdminTools:
     @staticmethod
     def clear_vram():
         """
-        Attempts to reset the graphics driver (dangerous/flickery).
-        Actually, 'Ctrl+Shift+Win+B' is the shortcut. 
-        We can't easily trigger that programmatically reliably.
-        Instead, we'll just log a placeholder for now as it's risky to crash the driver.
+        Attempts to reset the graphics driver.
+        Using the standard Windows key combo: Ctrl+Shift+Win+B
         """
-        # subprocess.call('... restart-gpu ...') 
-
+        LOGGER.log("ADMIN: Resetting Graphics Driver (Ctrl+Shift+Win+B)...")
+        try:
+            import ctypes
+            from ctypes import wintypes
+            
+            # Constants for SendInput
+            INPUT_KEYBOARD = 1
+            KEYEVENTF_KEYUP = 0x0002
+            VK_CONTROL = 0x11
+            VK_SHIFT = 0x10
+            VK_LWIN = 0x5B
+            VK_B = 0x42
+            
+            # Structures for SendInput
+            class KEYBDINPUT(ctypes.Structure):
+                _fields_ = [("wVk", wintypes.WORD), ("wScan", wintypes.WORD), ("dwFlags", wintypes.DWORD), ("time", wintypes.DWORD), ("dwExtraInfo", ctypes.POINTER(ctypes.c_ulong))]
+            
+            class INPUT(ctypes.Structure):
+                class _I(ctypes.Union):
+                    _fields_ = [("ki", KEYBDINPUT)]
+                _anonymous_ = ("i",)
+                _fields_ = [("type", wintypes.DWORD), ("i", _I)]
+                
+            def press_key(vk):
+                ii = INPUT._I()
+                ii.ki = KEYBDINPUT(vk, 0, 0, 0, None)
+                ctypes.windll.user32.SendInput(1, ctypes.byref(INPUT(INPUT_KEYBOARD, ii)), ctypes.sizeof(INPUT))
+                
+            def release_key(vk):
+                ii = INPUT._I()
+                ii.ki = KEYBDINPUT(vk, 0, KEYEVENTF_KEYUP, 0, None)
+                ctypes.windll.user32.SendInput(1, ctypes.byref(INPUT(INPUT_KEYBOARD, ii)), ctypes.sizeof(INPUT))
+            
+            # Execute Combo
+            press_key(VK_CONTROL)
+            press_key(VK_SHIFT)
+            press_key(VK_LWIN)
+            press_key(VK_B)
+            
+            release_key(VK_B)
+            release_key(VK_LWIN)
+            release_key(VK_SHIFT)
+            release_key(VK_CONTROL)
+            
+            LOGGER.log("ADMIN: Graphics driver reset signal sent.")
+        except Exception as e:
+            LOGGER.error(f"ADMIN: Graphics Reset Failed: {e}")
     
     @staticmethod
     def set_start_with_windows(enable: bool):
@@ -189,14 +229,13 @@ class AdminTools:
     @staticmethod
     def start_system_debugger():
         """
-        Starts the 'God Mode' system debugger.
-        For now, this is simulated as we don't have a full kernel driver.
-        We will enable VERBOSE logging and perhaps spawn a secondary watcher.
+        Starts the Nuclear System Debugger (God Mode Logging).
+        Enables high-verbosity OS event monitoring.
         """
-        LOGGER.log("ADMIN: *** SYSTEM DEBUGGER (GOD MODE) ENABLED ***")
-        LOGGER.log("ADMIN: Monitoring Process Creation (Simulated)...")
-        LOGGER.log("ADMIN: Monitoring File System Events (Watchdog Active)...")
-        # In a real scenario, we'd hook specific Windows APIs here.
-        # For this prototype, we just verify the Logger is in max verbosity.
-        LOGGER.set_debug(True) 
-        LOGGER.log("ADMIN: Log Rotation Policy: FIFO > 1GB (Active).") 
+        from .god_logger import GodModeLogger
+        logger = GodModeLogger()
+        if not logger.enabled:
+            logger.start()
+            LOGGER.log("ADMIN: Nuclear System Debugger Enabled.")
+        else:
+            LOGGER.log("ADMIN: System Debugger already active.")

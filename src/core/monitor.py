@@ -118,13 +118,7 @@ class SystemMonitor:
                     LOGGER.log(f"GPUtil Error (Non-Critical): {e}")
 
                 if gpu_temp == "N/A" and self.wmi_interface:
-                    # WMI calls can be VERY slow, hence why we thread this.
-                    try:
-                        # Placeholder for WMI temp check logic if we want to risk it
-                        # For now, skipping to avoid "Hanging" unless explicitly requested
-                        pass 
-                    except Exception:
-                        pass
+                    pass
                 
                 new_stats['gpu_temp'] = gpu_temp
 

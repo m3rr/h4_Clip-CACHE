@@ -58,7 +58,6 @@ class ClipboardManager(QObject):
         if not text.strip(): 
             return
 
-        # Hash check to avoid duplicates/loops
         text_hash = hashlib.md5(text.encode('utf-8')).hexdigest()
         if text_hash == self.last_hash:
             return
@@ -72,34 +71,7 @@ class ClipboardManager(QObject):
         self.history_updated.emit()
         print("[CLIPBOARD] Captured Text")
 
-    def _handle_files(self, mime_data):
-        urls = mime_data.urls()
-        if not urls: return
-        
-        for url in urls:
-            local_path = url.toLocalFile()
-            if local_path and os.path.exists(local_path):
-                # Hash check (simple path hash for files)
-                file_hash = hashlib.md5(local_path.encode('utf-8')).hexdigest()
-                if file_hash == self.last_hash:
-                    continue
-                self.last_hash = file_hash
-                
-                meta = {
-                    "extension": os.path.splitext(local_path)[1],
-                    "size_bytes": os.path.getsize(local_path)
-                }
-                self.db.add_item("file", local_path, meta)
-        
-        self.history_updated.emit()
-        print(f"[CLIPBOARD] Captured {len(urls)} Files")
-
     def add_item(self, item_type, content):
-        """
-        Manual injection of item.
-        Updates DB and internal hash state (to avoid loops if set to clipboard later).
-        """
-        # Calculate hash to sync state
         content_hash = hashlib.md5(content.encode('utf-8')).hexdigest()
         self.last_hash = content_hash
         
@@ -118,11 +90,11 @@ class ClipboardManager(QObject):
 
     def _handle_image(self, mime_data):
         from PyQt6.QtCore import QBuffer, QIODevice
+        import time # Local import preserved as requested, or move to top? Rule 10 says "List, install... no surprise imports". I'll keep it for now but remove the redundant definition of handle_files.
         image = self.clipboard.image()
         if image.isNull():
             return
 
-        # Hash Image Bits to prevent duplicates
         ba = QBuffer()
         ba.open(QIODevice.OpenModeFlag.ReadWrite)
         image.save(ba, "PNG")
@@ -130,13 +102,10 @@ class ClipboardManager(QObject):
         img_hash = hashlib.md5(data).hexdigest()
         
         if img_hash == self.last_hash:
-            print("[CLIPBOARD] Duplicate Image Ignored")
             return
             
         self.last_hash = img_hash
         
-        # Save to cache
-        import time
         filename = f"img_{int(time.time()*1000)}.png"
         cache_dir = os.path.join("assets", "cache")
         if not os.path.exists(cache_dir):
@@ -164,20 +133,12 @@ class ClipboardManager(QObject):
         if not paths:
             return
 
-        # Hash path list to detect if this exact SET of files was just processed
-        # Join sorted paths to ensure order doesn't matter
         paths_str = ";".join(sorted(paths))
         files_hash = hashlib.md5(paths_str.encode('utf-8')).hexdigest()
         
         if files_hash == self.last_hash:
             return
         self.last_hash = files_hash
-        
-        # Requirement: "keeps a history" - Do we want 1 item or N items?
-        # User complained about "MULTIPLE entries". Let's group them into 1 item if > 1 file.
-        # Or add them individually but ensure the SET check prevents re-adding.
-        
-        # Taking "MULTIPLE entries" complaint seriously -> Group them.
         
         full_path_str = ";".join(paths)
         meta = {
